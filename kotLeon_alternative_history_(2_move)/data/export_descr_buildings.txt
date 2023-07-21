@@ -1,0 +1,5259 @@
+;This file is generated from a spreadsheet
+;Please do not modify by hand
+
+
+
+
+hidden_resources sparta rome italy
+
+building core_building
+{
+    levels governors_house governors_villa governors_palace proconsuls_palace imperial_palace 
+    {
+        governors_house requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+            }
+            construction  1 
+            cost  400 
+            settlement_min village
+            upgrades
+            {
+                governors_villa
+            }
+        }
+        governors_villa requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                agent diplomat  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+            }
+            construction  2 
+            cost  800 
+            settlement_min town
+            upgrades
+            {
+                governors_palace
+            }
+        }
+        governors_palace requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                agent diplomat  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+                upgrade_bodyguard 1 requires factions { barbarian, }
+            }
+            construction  3 
+            cost  1600 
+            settlement_min large_town
+            upgrades
+            {
+                proconsuls_palace
+            }
+        }
+        proconsuls_palace requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                agent diplomat  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+                upgrade_bodyguard 1 requires factions { barbarian, }
+            }
+            construction  4 
+            cost  3200 
+            settlement_min city
+            upgrades
+            {
+                imperial_palace
+            }
+        }
+        imperial_palace requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                agent diplomat  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+                upgrade_bodyguard 1
+            }
+            construction  6 
+            cost  6400 
+            settlement_min large_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building defenses
+{
+    levels wooden_pallisade wooden_wall stone_wall large_stone_wall epic_stone_wall 
+    {
+        wooden_pallisade requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                wall_level 0
+                tower_level 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                wooden_wall
+            }
+        }
+        wooden_wall requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                wall_level 1
+                gate_strength 1
+                tower_level 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                stone_wall
+            }
+        }
+        stone_wall requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                wall_level 2
+                tower_level 1
+                gate_defences 1
+                gate_strength 1
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                large_stone_wall
+            }
+        }
+        large_stone_wall requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                wall_level 3
+                tower_level 1
+                gate_defences 2
+                gate_strength 2
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                epic_stone_wall
+            }
+        }
+        epic_stone_wall requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                wall_level 4
+                tower_level 2
+                gate_defences 2
+                gate_strength 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building barracks
+{
+    levels muster_field militia_barracks city_barracks army_barracks royal_barracks 
+    {
+        muster_field requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+;------- t -------
+;                recruit "barb infantry longshield" 0  requires factions { britons, dacia, gauls, germans, scythia, spain, thrace, }
+;                recruit "carthaginian elephant african"  0  requires factions { carthage, numidia, }
+                recruit "barb gothic cavalry german"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+;                recruit "barb night raiders german"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+;                recruit "egyptian bedouin"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+;                recruit "merc sarmatian cavalry" 0  requires factions { britons, dacia, gauls, germans, scythia, spain, }
+;                recruit "east elephant"  0  requires factions { armenia, parthia, pontus, } 
+;                recruit "greek elephant african"  0  requires factions { greek_cities, thrace, seleucid, macedon, } 
+;                recruit "egyptian peasant"  0  requires factions { egypt, } 
+;                recruit "roman praetorian cohort i"  0  requires factions { roman, } 
+;-----------------
+;------- 1 -------
+                recruit "carthaginian city militia"  0  requires factions { spain, carthage, } 
+                recruit "barb infantry longshield"  0  requires factions { dacia, gauls, britons, } 
+                recruit "warband spear german"  0  requires factions { germans, } 
+                recruit "barb horse archers scythian"  0  requires factions { scythia, } and building_present_min_level missiles target_field
+                recruit "numidian javelinmen"  0  requires factions { numidia, } and building_present_min_level missiles target_field
+                recruit "bi berber axemen"  0  requires factions { numidia, } 
+                recruit "east infantry"  0  requires factions { eastern, } 
+                recruit "egyptian nubian spearmen"  0  requires factions { egyptian, } 
+                recruit "greek hoplite militia"  0  requires factions { greek, } 
+                recruit "roman city militia"  0  requires factions { roman, } 
+;-----------------
+            }
+            construction  2 
+            cost  600 
+            settlement_min town
+            upgrades
+            {
+                militia_barracks
+            }
+        }
+        militia_barracks requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "carthaginian city militia"  0  requires factions { spain, carthage, } 
+                recruit "barb infantry longshield"  0  requires factions { dacia, gauls, britons, } 
+                recruit "warband spear german"  0  requires factions { germans, } 
+                recruit "barb horse archers scythian"  0  requires factions { scythia, } and building_present_min_level missiles target_field
+                recruit "numidian javelinmen"  0  requires factions { numidia, } and building_present_min_level missiles target_field
+                recruit "bi berber axemen"  0  requires factions { numidia, } 
+                recruit "east infantry"  0  requires factions { eastern, } 
+                recruit "egyptian nubian spearmen"  0  requires factions { egyptian, } 
+                recruit "greek hoplite militia"  0  requires factions { greek, } 
+                recruit "roman city militia"  0  requires factions { roman, } 
+;-----------------
+;------- 2 -------
+                recruit "carthaginian infantry"  0  requires factions { spain, carthage, } 
+                recruit "warband sword gaul"  0  requires factions { gauls, britons, } 
+                recruit "warband axe scythian"  0  requires factions { scythia, germans, } 
+                recruit "warband falx"  0  requires factions { dacia, thrace, } 
+                recruit "numidian desert warriors"  0  requires factions { numidia, } 
+                recruit "east hillmen"  0  requires factions { eastern, } 
+                recruit "egyptian nile infantry"  0  requires factions { egyptian, } 
+                recruit "greek levy pikemen"  0  requires factions { seleucid, macedon, } 
+                recruit "greek hoplite"  0  requires factions { greek_cities, } 
+                recruit "roman hastati"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman infantry auxillia"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+            }
+            construction  3 
+            cost  1200 
+            settlement_min large_town
+            upgrades
+            {
+                city_barracks
+            }
+        }
+        city_barracks requires factions { barbarian, carthaginian, armenia, pontus, egyptian, greek, roman, } 
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "carthaginian city militia"  0  requires factions { spain, carthage, } 
+                recruit "barb infantry longshield"  0  requires factions { dacia, gauls, britons, } 
+                recruit "warband spear german"  0  requires factions { germans, } 
+                recruit "barb horse archers scythian"  0  requires factions { scythia, } and building_present_min_level missiles target_field
+                recruit "numidian javelinmen"  0  requires factions { numidia, } and building_present_min_level missiles target_field
+                recruit "bi berber axemen"  0  requires factions { numidia, } 
+                recruit "east infantry"  0  requires factions { eastern, } 
+                recruit "egyptian nubian spearmen"  0  requires factions { egyptian, } 
+                recruit "greek hoplite militia"  0  requires factions { greek, } 
+                recruit "roman city militia"  0  requires factions { roman, } 
+;-----------------
+;------- 2 -------
+                recruit "carthaginian infantry"  0  requires factions { spain, carthage, } 
+                recruit "warband sword gaul"  0  requires factions { gauls, britons, } 
+                recruit "warband axe scythian"  1  requires factions { scythia, germans, } 
+                recruit "warband falx"  0  requires factions { dacia, thrace, } 
+                recruit "numidian desert warriors"  1  requires factions { numidia, } 
+                recruit "east hillmen"  0  requires factions { eastern, } 
+                recruit "egyptian nile infantry"  0  requires factions { egyptian, } 
+                recruit "greek levy pikemen"  0  requires factions { seleucid, macedon, } 
+                recruit "greek hoplite"  0  requires factions { greek_cities, } 
+                recruit "roman hastati"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman infantry auxillia"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 3 -------
+                recruit "spanish scutarii"  0  requires factions { spain, } 
+                recruit "barb warguard"  0  requires factions { britons, dacia, gauls, } 
+                recruit "warband dhaxe german"  0  requires factions { germans, } 
+                recruit "carthaginian medium infantry"  0  requires factions { carthage, } 
+                recruit "bi hillmen"  0  requires factions { numidia, } 
+                recruit "east heavy infantry"  0  requires factions { armenia, } 
+                recruit "greek pikemen"  0  requires factions { thrace, seleucid, macedon, pontus, } 
+                recruit "egyptian infantry"  0  requires factions { egyptian, } 
+                recruit "greek hoplite elite"  0  requires factions { greek_cities, } 
+                recruit "roman princeps"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman legionary cohort i"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+            }
+            construction  4 
+            cost  2400 
+            settlement_min city
+            upgrades
+            {
+                army_barracks
+            }
+        }
+        army_barracks requires factions { barbarian, carthaginian, armenia, pontus, egyptian, greek, roman, } 
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "carthaginian city militia"  0  requires factions { spain, carthage, } 
+                recruit "barb infantry longshield"  0  requires factions { dacia, gauls, britons, } 
+                recruit "warband spear german"  0  requires factions { germans, } 
+                recruit "barb horse archers scythian"  0  requires factions { scythia, } and building_present_min_level missiles target_field
+                recruit "numidian javelinmen"  0  requires factions { numidia, } and building_present_min_level missiles target_field
+                recruit "bi berber axemen"  0  requires factions { numidia, } 
+                recruit "east infantry"  0  requires factions { eastern, } 
+                recruit "egyptian nubian spearmen"  0  requires factions { egyptian, } 
+                recruit "greek hoplite militia"  0  requires factions { greek, } 
+                recruit "roman city militia"  0  requires factions { roman, } 
+;-----------------
+;------- 2 -------
+                recruit "carthaginian infantry"  0  requires factions { spain, carthage, } 
+                recruit "warband sword gaul"  0  requires factions { gauls, britons, } 
+                recruit "warband axe scythian"  1  requires factions { scythia, germans, } 
+                recruit "warband falx"  0  requires factions { dacia, thrace, } 
+                recruit "numidian desert warriors"  1  requires factions { numidia, } 
+                recruit "east hillmen"  0  requires factions { eastern, } 
+                recruit "egyptian nile infantry"  0  requires factions { egyptian, } 
+                recruit "greek levy pikemen"  0  requires factions { seleucid, macedon, } 
+                recruit "greek hoplite"  1  requires factions { greek_cities, } 
+                recruit "roman hastati"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman infantry auxillia"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 3 -------
+                recruit "spanish scutarii"  0  requires factions { spain, } 
+                recruit "barb warguard"  0  requires factions { britons, dacia, gauls, } 
+                recruit "warband dhaxe german"  0  requires factions { germans, } 
+                recruit "carthaginian medium infantry"  0  requires factions { carthage, } 
+                recruit "bi hillmen"  0  requires factions { numidia, } 
+                recruit "east heavy infantry"  0  requires factions { armenia, } 
+                recruit "greek pikemen"  0  requires factions { thrace, seleucid, macedon, pontus, } 
+                recruit "egyptian infantry"  0  requires factions { egyptian, } 
+                recruit "greek hoplite elite"  0  requires factions { greek_cities, } 
+                recruit "roman princeps"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman legionary cohort i"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 4 -------
+                recruit "carthaginian heavy infantry"  0  requires factions { carthage, } 
+                recruit "east legionary"  0  requires factions { armenia, numidia, } 
+                recruit "east hoplite brazen shield"  0  requires factions { pontus, } 
+                recruit "egyptian elite guards"  0  requires factions { egyptian, } 
+                recruit "greek royal pikemen"  0  requires factions { macedon, } 
+                recruit "greek silver shield pikemen"  0  requires factions { seleucid, } 
+                recruit "greek hoplite spartan"  0  requires factions { greek_cities, thrace, seleucid, macedon, }  and hidden_resource sparta
+                recruit "greek bastarnae"  0  requires factions { thrace, } 
+;                recruit "roman legionary first cohort i"  0  requires factions { roman, }  and hidden_resource rome and marian_reforms 
+                recruit "roman legionary first cohort i"  0  requires factions { roman, }  and marian_reforms 
+                recruit "roman triarii"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman legionary cohort ii"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+            }
+            construction  6 
+            cost  4800 
+            settlement_min large_city
+            upgrades
+            {
+                royal_barracks
+            }
+        }
+        royal_barracks requires factions { seleucid, roman, } 
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "carthaginian city militia"  0  requires factions { spain, carthage, } 
+                recruit "barb infantry longshield"  0  requires factions { dacia, gauls, britons, } 
+                recruit "warband spear german"  0  requires factions { germans, } 
+                recruit "barb horse archers scythian"  0  requires factions { scythia, } and building_present_min_level missiles target_field
+                recruit "numidian javelinmen"  0  requires factions { numidia, } and building_present_min_level missiles target_field
+                recruit "bi berber axemen"  0  requires factions { numidia, } 
+                recruit "east infantry"  0  requires factions { eastern, } 
+                recruit "egyptian nubian spearmen"  0  requires factions { egyptian, } 
+                recruit "greek hoplite militia"  0  requires factions { greek, } 
+                recruit "roman city militia"  0  requires factions { roman, } 
+;-----------------
+;------- 2 -------
+                recruit "carthaginian infantry"  0  requires factions { spain, carthage, } 
+                recruit "warband sword gaul"  0  requires factions { gauls, britons, } 
+                recruit "warband axe scythian"  1  requires factions { scythia, germans, } 
+                recruit "warband falx"  0  requires factions { dacia, thrace, } 
+                recruit "numidian desert warriors"  1  requires factions { numidia, } 
+                recruit "east hillmen"  0  requires factions { eastern, } 
+                recruit "egyptian nile infantry"  0  requires factions { egyptian, } 
+                recruit "greek levy pikemen"  0  requires factions { seleucid, macedon, } 
+                recruit "greek hoplite"  1  requires factions { greek_cities, } 
+                recruit "roman hastati"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman infantry auxillia"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 3 -------
+                recruit "spanish scutarii"  0  requires factions { spain, } 
+                recruit "barb warguard"  0  requires factions { britons, dacia, gauls, } 
+                recruit "warband dhaxe german"  0  requires factions { germans, } 
+                recruit "carthaginian medium infantry"  0  requires factions { carthage, } 
+                recruit "bi hillmen"  0  requires factions { numidia, } 
+                recruit "east heavy infantry"  0  requires factions { armenia, } 
+                recruit "greek pikemen"  0  requires factions { thrace, seleucid, macedon, pontus, } 
+                recruit "egyptian infantry"  0  requires factions { egyptian, } 
+                recruit "greek hoplite elite"  0  requires factions { greek_cities, } 
+                recruit "roman princeps"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman legionary cohort i"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 4 -------
+                recruit "carthaginian heavy infantry"  0  requires factions { carthage, } 
+                recruit "east legionary"  0  requires factions { armenia, numidia, } 
+                recruit "east hoplite brazen shield"  0  requires factions { pontus, } 
+                recruit "egyptian elite guards"  0  requires factions { egyptian, } 
+                recruit "greek royal pikemen"  0  requires factions { macedon, } 
+                recruit "greek silver shield pikemen"  0  requires factions { seleucid, } 
+                recruit "greek hoplite spartan"  0  requires factions { greek_cities, thrace, seleucid, macedon, }  and hidden_resource sparta
+                recruit "greek bastarnae"  0  requires factions { thrace, } 
+;                recruit "roman legionary first cohort i"  0  requires factions { roman, }  and hidden_resource rome and marian_reforms 
+                recruit "roman legionary first cohort i"  0  requires factions { roman, } and marian_reforms 
+                recruit "roman triarii"  1  requires factions { roman, }  and not marian_reforms 
+                recruit "roman legionary cohort ii"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 5 -------
+                recruit "greek argyraspid"  0  requires factions { seleucid, } 
+;                recruit "roman legionary first cohort ii"  0  requires factions { roman, }  and hidden_resource rome and marian_reforms 
+                recruit "roman legionary first cohort ii"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+            }
+            construction  7 
+            cost  9600 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building praetorian_institution
+{
+    levels praetorian_institution_01 praetorian_institution_02
+    {
+        praetorian_institution_01 requires factions { roman, } and building_present_min_level barracks army_barracks or building_present_min_level core_building imperial_palace
+        {
+            capability
+            {
+                recruit "roman praetorian cohort i"  0  requires factions { roman, } and marian_reforms 
+                law_bonus bonus 1
+            }
+            construction 5
+            cost 3200
+            settlement_min large_city
+            upgrades
+            {
+		praetorian_institution_02
+            }
+        }
+        praetorian_institution_02 requires factions { roman, } and building_present_min_level barracks royal_barracks
+        {
+            capability
+            {
+                recruit "roman praetorian cohort i"  0  requires factions { roman, } and marian_reforms 
+                recruit "roman praetorian cohort urban i"  0  requires factions { roman, }  and marian_reforms
+                law_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building equestrian
+{
+    levels stables cavalry_barracks hippodrome circus_maximus 
+    {
+        stables requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+;------- 1 -------
+	;------ smith -------
+                recruit "barb chariot light briton"  0  requires factions { britons, } and building_present_min_level smith blacksmith
+                recruit "east scythed chariot"  0  requires factions { pontus, seleucid, } and building_present_min_level smith blacksmith
+                recruit "egyptian chariot"  0  requires factions { egyptian, } and building_present_min_level smith blacksmith
+                recruit "rebel amazon chariots"  0  requires factions { slave, } and building_present_min_level smith blacksmith
+	;--------------------
+                recruit "carthaginian cavalry"  0  requires factions { spain, carthage, } 
+                recruit "barb cavalry" 0  requires factions { dacia, gauls, germans, scythia, }
+                recruit "bi moorish raiders"  0  requires factions { numidia, } 
+                recruit "east cavalry"  0  requires factions { pontus, } and building_present_min_level missiles target_field
+                recruit "east horse archer"  0  requires factions { armenia, parthia, } and building_present_min_level missiles target_field
+                recruit "egyptian cavalry"  0  requires factions { egyptian, } 
+                recruit "greek light lancer"  0  requires factions { macedon, } 
+                recruit "greek cavalry"  0  requires factions { seleucid, thrace, greek_cities, } and building_present_min_level missiles target_field
+                recruit "roman medium cavalry"  0  requires factions { roman, }  and marian_reforms 
+                recruit "roman light cavalry"  0  requires factions { roman, }  and not marian_reforms 
+;-----------------
+            }
+            construction  3 
+            cost  1200 
+            settlement_min large_town
+            upgrades
+            {
+                cavalry_barracks
+            }
+        }
+        cavalry_barracks requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+;------- 1 -------
+	;------ smith -------
+                recruit "barb chariot light briton"  0  requires factions { britons, } and building_present_min_level smith blacksmith
+                recruit "east scythed chariot"  0  requires factions { pontus, seleucid, } and building_present_min_level smith blacksmith
+                recruit "egyptian chariot"  0  requires factions { egyptian, } and building_present_min_level smith blacksmith
+                recruit "rebel amazon chariots"  0  requires factions { slave, } and building_present_min_level smith blacksmith
+	;--------------------
+                recruit "carthaginian cavalry"  0  requires factions { spain, carthage, } 
+                recruit "barb cavalry" 0  requires factions { dacia, gauls, germans, scythia, }
+                recruit "bi moorish raiders"  0  requires factions { numidia, } 
+                recruit "east cavalry"  0  requires factions { pontus, } and building_present_min_level missiles target_field
+                recruit "east horse archer"  0  requires factions { armenia, parthia, } and building_present_min_level missiles target_field
+                recruit "egyptian cavalry"  0  requires factions { egyptian, } 
+                recruit "greek light lancer"  0  requires factions { macedon, } 
+                recruit "greek cavalry"  0  requires factions { seleucid, thrace, greek_cities, } and building_present_min_level missiles target_field
+                recruit "roman light cavalry"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman medium cavalry"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 2 -------
+	;------ smith -------
+                recruit "barb chariot heavy briton"  0  requires factions { britons, } and building_present_min_level smith smiths_workshop
+                recruit "rebel amazon chariots"  2  requires factions { slave, } and building_present_min_level smith smiths_workshop
+                recruit "east chariot archer"  0  requires factions { pontus, } and building_present_min_level smith smiths_workshop
+                recruit "egyptian chariot archer"  0  requires factions { egyptian, } and building_present_min_level smith smiths_workshop
+	;--------------------
+                recruit "carthaginian medium cavalry"  0  requires factions { spain, carthaginian, } 
+                recruit "bi desert cavalry"  0  requires factions { numidia, } and building_present_min_level missiles target_field
+                recruit "barb noble cavalry" 0  requires factions { dacia, gauls, germans, }
+                recruit "merc sarmatian cavalry"  0  requires factions { scythia, } 
+                recruit "barb noble horse archers scythian"  0  requires factions { scythia, } and building_present_min_level missiles target_field
+                recruit "east heavy cavalry"  0  requires factions { pontus, } 
+                recruit "east persian cavalry"  0  requires factions { parthia, } and building_present_min_level missiles target_field
+                recruit "east cataphract archer"  0  requires factions { armenia, } and building_present_min_level missiles target_field
+                recruit "egyptian nubian cavalry"  0  requires factions { egyptian, } 
+                recruit "greek medium cavalry"  0  requires factions { greek, } 
+                recruit "roman cavalry auxillia"  0  requires factions { roman, }  and not marian_reforms and building_present_min_level missiles target_field
+                recruit "bi equites sagittarii"  0  requires factions { roman, }  and marian_reforms and building_present_min_level missiles target_field
+;-----------------
+            }
+            construction  4 
+            cost  2400 
+            settlement_min city
+            upgrades
+            {
+                hippodrome
+            }
+        }
+        hippodrome requires factions { barbarian, carthage, eastern, egyptian, greek_cities, macedon, seleucid, roman, } 
+        {
+            capability
+            {
+;------- 1 -------
+	;------ smith -------
+                recruit "barb chariot light briton"  0  requires factions { britons, } and building_present_min_level smith blacksmith
+                recruit "east scythed chariot"  0  requires factions { pontus, seleucid, } and building_present_min_level smith blacksmith
+                recruit "egyptian chariot"  0  requires factions { egyptian, } and building_present_min_level smith blacksmith
+                recruit "rebel amazon chariots"  0  requires factions { slave, } and building_present_min_level smith blacksmith
+	;--------------------
+                recruit "carthaginian cavalry"  0  requires factions { spain, carthage, } 
+                recruit "barb cavalry" 0  requires factions { dacia, gauls, germans, scythia, }
+                recruit "bi moorish raiders"  0  requires factions { numidia, } 
+                recruit "east cavalry"  0  requires factions { pontus, } and building_present_min_level missiles target_field
+                recruit "east horse archer"  0  requires factions { armenia, parthia, } and building_present_min_level missiles target_field
+                recruit "egyptian cavalry"  0  requires factions { egyptian, } 
+                recruit "greek light lancer"  0  requires factions { macedon, } 
+                recruit "greek cavalry"  0  requires factions { seleucid, thrace, greek_cities, } and building_present_min_level missiles target_field
+                recruit "roman light cavalry"  1  requires factions { roman, }  and not marian_reforms 
+                recruit "roman medium cavalry"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 2 -------
+	;------ smith -------
+                recruit "barb chariot heavy briton"  0  requires factions { britons, } and building_present_min_level smith smiths_workshop
+                recruit "rebel amazon chariots"  2  requires factions { slave, } and building_present_min_level smith smiths_workshop
+                recruit "east chariot archer"  0  requires factions { pontus, } and building_present_min_level smith smiths_workshop
+                recruit "egyptian chariot archer"  0  requires factions { egyptian, } and building_present_min_level smith smiths_workshop
+	;--------------------
+                recruit "carthaginian medium cavalry"  0  requires factions { spain, carthaginian, } 
+                recruit "bi desert cavalry"  0  requires factions { numidia, } and building_present_min_level missiles target_field
+                recruit "barb noble cavalry" 0  requires factions { dacia, gauls, germans, }
+                recruit "merc sarmatian cavalry"  0  requires factions { scythia, } 
+                recruit "barb noble horse archers scythian"  0  requires factions { scythia, } and building_present_min_level missiles target_field
+                recruit "east heavy cavalry"  0  requires factions { pontus, } 
+                recruit "east persian cavalry"  0  requires factions { parthia, } and building_present_min_level missiles target_field
+                recruit "east cataphract archer"  0  requires factions { armenia, } and building_present_min_level missiles target_field
+                recruit "egyptian nubian cavalry"  0  requires factions { egyptian, } 
+                recruit "greek medium cavalry"  0  requires factions { greek, } 
+                recruit "roman cavalry auxillia"  0  requires factions { roman, }  and not marian_reforms and building_present_min_level missiles target_field
+                recruit "bi equites sagittarii"  0  requires factions { roman, }  and marian_reforms and building_present_min_level missiles target_field
+;-----------------
+;------- 3 -------
+                recruit "east cappodocian cavalry"  0  requires factions { pontus, } 
+                recruit "east heavy cataphract"  0  requires factions { armenia, parthia, seleucid, } 
+                recruit "egyptian cleruch"  0  requires factions { egyptian, } 
+                recruit "greek heavy cavalry"  0  requires factions { macedon, } 
+                recruit "bi scholae palatinae"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman heavy cavalry"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+            }
+            construction  6 
+            cost  4800 
+            settlement_min large_city
+            upgrades
+            {
+                circus_maximus
+            }
+        }
+        circus_maximus requires factions { carthage, parthia, macedon, seleucid, roman, } 
+        {
+            capability
+            {
+;------- 1 -------
+	;------ smith -------
+                recruit "barb chariot light briton"  0  requires factions { britons, } and building_present_min_level smith blacksmith
+                recruit "east scythed chariot"  0  requires factions { pontus, seleucid, } and building_present_min_level smith blacksmith
+                recruit "egyptian chariot"  0  requires factions { egyptian, } and building_present_min_level smith blacksmith
+                recruit "rebel amazon chariots"  0  requires factions { slave, } and building_present_min_level smith blacksmith
+	;--------------------
+                recruit "carthaginian cavalry"  0  requires factions { spain, carthage, } 
+                recruit "barb cavalry" 0  requires factions { dacia, gauls, germans, scythia, }
+                recruit "bi moorish raiders"  0  requires factions { numidia, } 
+                recruit "east cavalry"  0  requires factions { pontus, } and building_present_min_level missiles target_field
+                recruit "east horse archer"  0  requires factions { armenia, parthia, } and building_present_min_level missiles target_field
+                recruit "egyptian cavalry"  0  requires factions { egyptian, } 
+                recruit "greek light lancer"  0  requires factions { macedon, } 
+                recruit "greek cavalry"  0  requires factions { seleucid, thrace, greek_cities, } and building_present_min_level missiles target_field
+                recruit "roman light cavalry"  2  requires factions { roman, }  and not marian_reforms 
+                recruit "roman medium cavalry"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 2 -------
+	;------ smith -------
+                recruit "barb chariot heavy briton"  0  requires factions { britons, } and building_present_min_level smith smiths_workshop
+                recruit "rebel amazon chariots"  2  requires factions { slave, } and building_present_min_level smith smiths_workshop
+                recruit "east chariot archer"  0  requires factions { pontus, } and building_present_min_level smith smiths_workshop
+                recruit "egyptian chariot archer"  0  requires factions { egyptian, } and building_present_min_level smith smiths_workshop
+	;--------------------
+                recruit "carthaginian medium cavalry"  0  requires factions { spain, carthaginian, } 
+                recruit "bi desert cavalry"  0  requires factions { numidia, } and building_present_min_level missiles target_field
+                recruit "barb noble cavalry" 0  requires factions { dacia, gauls, germans, }
+                recruit "merc sarmatian cavalry"  0  requires factions { scythia, } 
+                recruit "barb noble horse archers scythian"  0  requires factions { scythia, } and building_present_min_level missiles target_field
+                recruit "east heavy cavalry"  0  requires factions { pontus, } 
+                recruit "east persian cavalry"  0  requires factions { parthia, } and building_present_min_level missiles target_field
+                recruit "east cataphract archer"  0  requires factions { armenia, } and building_present_min_level missiles target_field
+                recruit "egyptian nubian cavalry"  0  requires factions { egyptian, } 
+                recruit "greek medium cavalry"  0  requires factions { greek, } 
+                recruit "roman cavalry auxillia"  0  requires factions { roman, }  and not marian_reforms and building_present_min_level missiles target_field
+                recruit "bi equites sagittarii"  0  requires factions { roman, }  and marian_reforms and building_present_min_level missiles target_field
+;-----------------
+;------- 3 -------
+                recruit "east cappodocian cavalry"  0  requires factions { pontus, } 
+                recruit "east heavy cataphract"  0  requires factions { armenia, parthia, seleucid, } 
+                recruit "egyptian cleruch"  0  requires factions { egyptian, } 
+                recruit "greek heavy cavalry"  0  requires factions { macedon, } 
+                recruit "bi scholae palatinae"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman heavy cavalry"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 4 -------
+                recruit "carthaginian royal cavalry"  0  requires factions { carthage, } 
+                recruit "greek royal cavalry"  0  requires factions { seleucid, macedon, } 
+                recruit "roman praetorian cavalry"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+            }
+            construction  7 
+            cost  9600 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building control_organize_race
+{
+    levels control_organize_race_01 control_organize_race_02
+    {
+        control_organize_race_01 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level equestrian hippodrome
+        {
+            capability
+            {
+		taxable_income_bonus bonus 3
+                stage_races 1 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+            }
+            construction 5
+            cost 3200
+            settlement_min large_city
+            upgrades
+            {
+		control_organize_race_02
+            }
+        }
+        control_organize_race_02 requires factions { carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level equestrian circus_maximus
+        {
+            capability
+            {
+		taxable_income_bonus bonus 6
+                stage_races 2 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building menagerie
+{
+    levels menagerie_control menagerie_kennel menagerie_pigsty
+    {
+        menagerie_control requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management and resource dogs or resource pigs or resource wild_animals or resource timber or resource hides or resource furs
+        {
+            capability
+            {
+                trade_base_income_bonus bonus 1
+            }
+            construction 1
+            cost 400
+            settlement_min town
+            upgrades
+            {
+                menagerie_kennel
+            }
+        }
+        menagerie_kennel requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management and building_present_min_level equestrian stables and resource dogs or resource pigs or resource wild_animals or resource timber or resource hides or resource furs
+        {
+            capability
+            {
+;------- 1 -------
+	;------ dog ------
+                recruit "barb wardogs" 0  requires factions { britons, dacia, gauls, germans, scythia, }
+                recruit "carthaginian warhounds"  0  requires factions { spain, carthaginian, eastern, egyptian, }
+                recruit "roman wardogs"  0  requires factions { roman, greek, }
+	;-----------------
+;-----------------
+                trade_base_income_bonus bonus 1
+            }
+            construction 2
+            cost 800
+            settlement_min large_town
+            upgrades
+            {
+                menagerie_pigsty
+            }
+        }
+        menagerie_pigsty requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management and building_present_min_level equestrian hippodrome and resource pigs or resource wild_animals or resource timber or resource hides or resource furs
+        {
+            capability
+            {
+;------- 1 -------
+	;------ dog ------
+                recruit "barb wardogs" 0  requires factions { britons, dacia, gauls, germans, scythia, }
+                recruit "carthaginian warhounds"  0  requires factions { spain, carthaginian, eastern, egyptian, }
+                recruit "roman wardogs"  0  requires factions { roman, greek, }
+	;-----------------
+;-----------------
+;------- 2 -------
+	;------ pig ------
+                recruit "barb incendiary pigs" 0  requires factions { britons, dacia, gauls, germans, scythia, }
+                recruit "greek incendiary pigs"  0  requires factions { carthaginian, eastern, egyptian, spain, }
+                recruit "roman pigs"  0  requires factions { roman, greek, }
+	;-----------------
+;-----------------
+                trade_base_income_bonus bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building encampment
+{
+    levels encampment_01 encampment_02 encampment_03 encampment_04
+    {
+        encampment_01 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and resource camels or resource elephants
+        {
+            capability
+            {
+                taxable_income_bonus bonus 3
+            }
+            construction 1
+            cost 400
+            settlement_min town
+            upgrades
+            {
+                encampment_02
+            }
+        }
+        encampment_02 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level equestrian cavalry_barracks and resource camels or resource elephants
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "carthaginian elephant forest"  0  requires factions { carthage, parthia, }  and resource elephants
+                recruit "numidian camel riders"  0  requires factions { numidia, }  and resource camels
+                recruit "greek elephant small"  0  requires factions { greek, roman, egyptian, }  and resource elephants
+                recruit "bi camel raiders"  0  requires factions { armenia, pontus, }  and resource camels
+;-----------------
+                taxable_income_bonus bonus 4
+            }
+            construction 3
+            cost 1600
+            settlement_min city
+            upgrades
+            {
+                encampment_03
+            }
+        }
+        encampment_03 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level equestrian hippodrome and building_present_min_level missiles target_field and resource camels or resource elephants
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "carthaginian elephant forest"  0  requires factions { carthage, parthia, }  and resource elephants
+                recruit "numidian camel riders"  0  requires factions { numidia, }  and resource camels
+                recruit "greek elephant small"  0  requires factions { greek, roman, egyptian, }  and resource elephants
+                recruit "bi camel raiders"  0  requires factions { armenia, pontus, }  and resource camels
+;-----------------
+;------- 2 -------
+                recruit "carthaginian elephant forest"  0  requires factions { numidia, armenia, pontus, }  and resource elephants
+                recruit "carthaginian elephant african"  0  requires factions { carthage, parthia, }  and resource elephants
+                recruit "greek elephant african"  0  requires factions { greek, }  and resource elephants
+                recruit "egyptian bedouin"  0  requires factions { egyptian, }  and resource camels
+                recruit "bi dromedarii"  0  requires factions { roman, } and resource camels
+;-----------------
+                taxable_income_bonus bonus 5
+            }
+            construction 5
+            cost 3200
+            settlement_min large_city
+            upgrades
+            {
+		encampment_04
+            }
+        }
+        encampment_04 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level equestrian circus_maximus and resource camels or resource elephants
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "carthaginian elephant forest"  0  requires factions { carthage, parthia, }  and resource elephants
+                recruit "numidian camel riders"  0  requires factions { numidia, }  and resource camels
+                recruit "greek elephant small"  0  requires factions { greek, roman, egyptian, }  and resource elephants
+                recruit "bi camel raiders"  0  requires factions { armenia, pontus, }  and resource camels
+;-----------------
+;------- 2 -------
+                recruit "carthaginian elephant forest"  0  requires factions { numidia, armenia, pontus, }  and resource elephants
+                recruit "carthaginian elephant african"  0  requires factions { carthage, parthia, }  and resource elephants
+                recruit "greek elephant african"  0  requires factions { greek, }  and resource elephants
+                recruit "egyptian bedouin"  0  requires factions { egyptian, }  and resource camels
+                recruit "bi dromedarii"  0  requires factions { roman, } and resource camels
+;-----------------
+;------- 3 -------
+                recruit "carthaginian elephant african cataphract"  0  requires factions { carthage, }  and resource elephants
+                recruit "east camel cataphract"  0  requires factions { parthia, }  and resource camels
+                recruit "greek elephant cataphract"  0  requires factions { seleucid, }  and resource elephants
+;-----------------
+                taxable_income_bonus bonus 6
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building missiles
+{
+    levels target_field practice_field archery_range catapult_range siege_engineer 
+    {
+        target_field requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+        {
+            capability
+            {
+            }
+            construction 1
+            cost 400
+            settlement_min town
+            upgrades
+            {
+                practice_field
+            }
+        }
+        practice_field requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "carthaginian peltast"  0  requires factions { spain, carthage, } 
+                recruit "barb peltast gaul"  0  requires factions { gauls, germans, } 
+                recruit "barb slinger briton"  0  requires factions { britons, } 
+                recruit "barb archer dacian"  0  requires factions { dacia, scythia, } 
+                recruit "carthaginian archer"  0  requires factions { numidia, } 
+                recruit "east peltast"  0  requires factions { armenia, pontus, } 
+                recruit "east slinger"  0  requires factions { parthia, } 
+                recruit "egyptian peltast"  0  requires factions { egyptian, } 
+                recruit "egyptian slingers"  0  requires factions { egyptian, } 
+                recruit "greek peltast"  0  requires factions { greek, } 
+                recruit "roman velite"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman light infantry auxillia"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+            }
+            construction  3 
+            cost  1200 
+            settlement_min large_town
+            upgrades
+            {
+                archery_range
+            }
+        }
+        archery_range requires factions { spain, scythia, germans, gauls, dacia, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "carthaginian peltast"  0  requires factions { spain, carthage, } 
+                recruit "barb peltast gaul"  0  requires factions { gauls, germans, } 
+                recruit "barb slinger briton"  0  requires factions { britons, } 
+                recruit "barb archer dacian"  0  requires factions { dacia, scythia, } 
+                recruit "carthaginian archer"  0  requires factions { numidia, } 
+                recruit "east peltast"  0  requires factions { armenia, pontus, } 
+                recruit "east slinger"  0  requires factions { parthia, } 
+                recruit "egyptian peltast"  0  requires factions { egyptian, } 
+                recruit "egyptian slingers"  0  requires factions { egyptian, } 
+                recruit "greek peltast"  0  requires factions { greek, } 
+                recruit "roman velite"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman light infantry auxillia"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 2 -------
+                recruit "carthaginian slinger"  0  requires factions { spain, carthaginian, } 
+                recruit "warband archer german"  0  requires factions { germans, dacia, scythia, } 
+                recruit "warband huntsman gaul"  0  requires factions { gauls, } 
+                recruit "east archer"  0  requires factions { eastern, } 
+                recruit "egyptian archer"  0  requires factions { egyptian, } 
+                recruit "greek archer"  0  requires factions { greek, } 
+                recruit "roman archer"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman archer auxillia"  0  requires factions { roman, }  and marian_reforms 
+                recruit "greek onager"  0  requires factions { dacia, scythia, } and building_present_min_level smith smiths_workshop
+;-----------------
+            }
+            construction  4 
+            cost  2400 
+            settlement_min city
+            upgrades
+            {
+                catapult_range
+            }
+        }
+        catapult_range requires factions { spain, scythia, germans, gauls, dacia, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "carthaginian peltast"  0  requires factions { spain, carthage, } 
+                recruit "barb peltast gaul"  0  requires factions { gauls, germans, } 
+                recruit "barb slinger briton"  0  requires factions { britons, } 
+                recruit "barb archer dacian"  0  requires factions { dacia, scythia, } 
+                recruit "carthaginian archer"  0  requires factions { numidia, } 
+                recruit "east peltast"  0  requires factions { armenia, pontus, } 
+                recruit "east slinger"  0  requires factions { parthia, } 
+                recruit "egyptian peltast"  0  requires factions { egyptian, } 
+                recruit "egyptian slingers"  0  requires factions { egyptian, } 
+                recruit "greek peltast"  0  requires factions { greek, } 
+                recruit "roman velite"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman light infantry auxillia"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 2 -------
+                recruit "carthaginian slinger"  0  requires factions { spain, carthaginian, } 
+                recruit "warband archer german"  0  requires factions { germans, dacia, scythia, } 
+                recruit "warband huntsman gaul"  0  requires factions { gauls, } 
+                recruit "east archer"  0  requires factions { eastern, } 
+                recruit "egyptian archer"  0  requires factions { egyptian, } 
+                recruit "greek archer"  0  requires factions { greek, } 
+                recruit "roman archer"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman archer auxillia"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 3 -------
+                recruit "egyptian archer elite"  0  requires factions { egyptian, } 
+                recruit "greek heavy peltast"  0  requires factions { greek_cities, } 
+                recruit "greek onager"  0  requires factions { thrace, seleucid, macedon, barbarian, carthaginian, eastern, } 
+                recruit "greek onager"  0  requires factions { egyptian, greek_cities, } and building_present_min_level smith smiths_workshop
+                recruit "roman onager"  0  requires factions { roman, } 
+;-----------------
+            }
+            construction  6 
+            cost  4800 
+            settlement_min large_city
+            upgrades
+            {
+                siege_engineer
+            }
+        }
+        siege_engineer requires factions { carthage, egypt, macedon, greek_cities, roman, } 
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "carthaginian peltast"  0  requires factions { spain, carthage, } 
+                recruit "barb peltast gaul"  0  requires factions { gauls, germans, } 
+                recruit "barb slinger briton"  0  requires factions { britons, } 
+                recruit "barb archer dacian"  0  requires factions { dacia, scythia, } 
+                recruit "carthaginian archer"  0  requires factions { numidia, } 
+                recruit "east peltast"  0  requires factions { armenia, pontus, } 
+                recruit "east slinger"  0  requires factions { parthia, } 
+                recruit "egyptian peltast"  0  requires factions { egyptian, } 
+                recruit "egyptian slingers"  0  requires factions { egyptian, } 
+                recruit "greek peltast"  0  requires factions { greek, } 
+                recruit "roman velite"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman light infantry auxillia"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 2 -------
+                recruit "carthaginian slinger"  0  requires factions { spain, carthaginian, } 
+                recruit "warband archer german"  0  requires factions { germans, dacia, scythia, } 
+                recruit "warband huntsman gaul"  0  requires factions { gauls, } 
+                recruit "east archer"  0  requires factions { eastern, } 
+                recruit "egyptian archer"  0  requires factions { egyptian, } 
+                recruit "greek archer"  0  requires factions { greek, } 
+                recruit "roman archer"  0  requires factions { roman, }  and not marian_reforms 
+                recruit "roman archer auxillia"  0  requires factions { roman, }  and marian_reforms 
+;-----------------
+;------- 3 -------
+                recruit "egyptian archer elite"  0  requires factions { egyptian, } 
+                recruit "greek heavy peltast"  0  requires factions { greek_cities, } 
+                recruit "greek onager"  0  requires factions { greek, barbarian, carthaginian, eastern, egyptian, } 
+                recruit "roman onager"  0  requires factions { roman, } 
+;-----------------
+;------- 4 -------
+                recruit "greek heavy onager"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, } 
+                recruit "roman heavy onager"  0  requires factions { roman, } 
+;-----------------
+            }
+            construction  7 
+            cost  9600 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building ballista_yard
+{
+    levels ballista_yard_01 ballista_yard_02 ballista_yard_03
+    {
+        ballista_yard_01 requires factions { dacia, macedon, greek_cities, roman, } and building_present_min_level missiles archery_range
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "greek ballista"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, }
+                recruit "roman ballista"  0  requires factions { roman, }
+;-----------------
+            }
+            construction 3
+            cost 1600
+            settlement_min city
+            upgrades
+            {
+		ballista_yard_02
+            }
+        }
+        ballista_yard_02 requires factions { roman, } and building_present_min_level missiles catapult_range
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "greek ballista"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, }
+                recruit "roman ballista"  0  requires factions { roman, }
+;-----------------
+;------- 2 -------
+                recruit "roman scorpion"  0  requires factions { roman, }
+                recruit "greek scorpion"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, }
+;-----------------
+            }
+            construction 5
+            cost 3200
+            settlement_min large_city
+            upgrades
+            {
+		ballista_yard_03
+            }
+        }
+        ballista_yard_03 requires factions { roman, } and building_present_min_level missiles siege_engineer
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "greek ballista"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, }
+                recruit "roman ballista"  0  requires factions { roman, }
+;-----------------
+;------- 2 -------
+                recruit "roman scorpion"  0  requires factions { roman, }
+                recruit "greek scorpion"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, }
+;-----------------
+;------- 3 -------
+                recruit "roman repeating ballista"  0  requires factions { roman, }
+                recruit "greek repeating ballista"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, }
+;-----------------
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building market
+{
+    levels trader market forum great_forum curia 
+    {
+        trader requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                trade_base_income_bonus bonus 1
+                population_growth_bonus bonus 1
+            }
+            construction  2 
+            cost  600 
+            settlement_min town
+            upgrades
+            {
+                market
+            }
+        }
+        market requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                agent spy  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+                trade_base_income_bonus bonus 2
+                population_growth_bonus bonus 1
+            }
+            construction  3 
+            cost  1200 
+            settlement_min large_town
+            upgrades
+            {
+                forum
+            }
+        }
+        forum requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                agent spy  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+                agent assassin  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+                trade_base_income_bonus bonus 3
+                population_growth_bonus bonus 1
+            }
+            construction  4 
+            cost  2400 
+            settlement_min city
+            upgrades
+            {
+                great_forum
+            }
+        }
+        great_forum requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                agent spy  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+                agent assassin  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+                trade_base_income_bonus bonus 4
+                population_growth_bonus bonus 2
+            }
+            construction  6 
+            cost  4800 
+            settlement_min large_city
+            upgrades
+            {
+                curia
+            }
+        }
+        curia requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                agent spy  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+                agent assassin  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+                trade_base_income_bonus bonus 5
+                population_growth_bonus bonus 2
+                happiness_bonus bonus 2
+            }
+            construction  7 
+            cost  9600 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building smith
+{
+    levels blacksmith smiths_workshop foundry 
+    {
+        blacksmith requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }  and building_present_min_level market trader
+        {
+            capability
+            {
+                weapon_simple 1
+                weapon_bladed 1
+            }
+            construction  3 
+            cost  1200 
+            settlement_min large_town
+            upgrades
+            {
+                smiths_workshop
+            }
+        }
+        smiths_workshop requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }  and building_present_min_level market market
+        {
+            capability
+            {
+                weapon_simple 1
+                weapon_bladed 1
+                weapon_missile 1
+                armour 1
+            }
+            construction  4 
+            cost  2400 
+            settlement_min city
+            upgrades
+            {
+                foundry
+            }
+        }
+        foundry requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }  and building_present_min_level market great_forum
+        {
+            capability
+            {
+                weapon_simple 2
+                weapon_bladed 2
+                weapon_missile 2
+                armour 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building port_buildings
+{
+    levels port shipwright dockyard 
+    {
+        port requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                recruit "naval boats"  0  requires factions { barbarian, } 
+                recruit "naval biremes"  0  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval pirate ships"  0  requires factions { slave, }
+                trade_fleet 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                shipwright
+            }
+        }
+        shipwright requires factions { barbarian, carthage, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                recruit "naval boats"  0  requires factions { barbarian, } 
+                recruit "naval large boats"  0  requires factions { barbarian, } 
+                recruit "naval biremes"  0  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval triremes"  0  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval pirate ships"  0  requires factions { slave, }
+                trade_fleet 2
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                dockyard
+            }
+        }
+        dockyard requires factions { barbarian, carthage, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                recruit "naval boats"  0  requires factions { barbarian, } 
+                recruit "naval large boats"  0  requires factions { barbarian, } 
+                recruit "naval biremes"  0  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval triremes"  0  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval quinquiremes"  0  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval pirate ships"  0  requires factions { slave, }
+                trade_fleet 3
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building health
+{
+    levels sewers baths aqueduct city_plumbing 
+    {
+        sewers requires factions { carthaginian, egyptian, greek, roman, }  and building_present_min_level market trader
+        {
+            capability
+            {
+                population_health_bonus bonus 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                baths
+            }
+        }
+        baths requires factions { carthaginian, egyptian, greek, roman, }  and building_present_min_level market market
+        {
+            capability
+            {
+                population_health_bonus bonus 2
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                aqueduct
+            }
+        }
+        aqueduct requires factions { greek, roman, }  and building_present_min_level market forum
+        {
+            capability
+            {
+                population_health_bonus bonus 3
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                city_plumbing
+            }
+        }
+        city_plumbing requires factions { roman, }  and building_present_min_level market great_forum
+        {
+            capability
+            {
+                population_health_bonus bonus 4
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building hinterland_farms
+{
+    levels farms farms+1 farms+2 farms+3 farms+4 
+    {
+        farms requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                farming_level 1
+            }
+            construction  2 
+            cost  600 
+            settlement_min town
+            upgrades
+            {
+                farms+1
+            }
+        }
+        farms+1 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                farming_level 2
+            }
+            construction  3 
+            cost  1200 
+            settlement_min large_town
+            upgrades
+            {
+                farms+2
+            }
+        }
+        farms+2 requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                farming_level 3
+            }
+            construction  4 
+            cost  2400 
+            settlement_min city
+            upgrades
+            {
+                farms+3
+            }
+        }
+        farms+3 requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                farming_level 4
+            }
+            construction  6 
+            cost  4800 
+            settlement_min large_city
+            upgrades
+            {
+                farms+4
+            }
+        }
+        farms+4 requires factions { carthaginian, egyptian, roman, } 
+        {
+            capability
+            {
+                farming_level 5
+            }
+            construction  7 
+            cost  9600 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building hinterland_roads
+{
+    levels roads paved_roads highways
+    {
+        roads requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                road_level 0
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                paved_roads
+            }
+        }
+        paved_roads requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level market forum or building_present_min_level health sewers
+        {
+            capability
+            {
+                road_level 1
+            }
+            construction  3 
+            cost  1200 
+            settlement_min large_town
+            upgrades
+            {
+                highways
+            }
+        }
+        highways requires factions { roman, egypt, greek_cities, macedon, seleucid, carthage, } and building_present_min_level market great_forum or building_present_min_level amphitheatres stone_amphitheatre
+        {
+            capability
+            {
+                road_level 2
+            }
+            construction  4 
+            cost  2400 
+            settlement_min city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building hinterland_mines
+{
+    levels mines mines+1 
+    {
+        mines requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }  and resource silver or resource gold
+        {
+            capability
+            {
+                mine_resource 4
+            }
+            construction  2 
+            cost  2000 
+            settlement_min town
+            upgrades
+            {
+                mines+1
+            }
+        }
+        mines+1 requires factions { carthaginian, eastern, egyptian, greek, roman, }  and resource silver or resource gold
+        {
+            capability
+            {
+                mine_resource 7
+            }
+            construction  3 
+            cost  3500 
+            settlement_min large_town
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building academic
+{
+    levels academy scriptorium ludus_magnus 
+    {
+        academy requires factions { carthaginian, eastern, egyptian, greek, roman, }  and building_present_min_level market market
+        {
+            capability
+            {
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                scriptorium
+            }
+        }
+        scriptorium requires factions { carthaginian, eastern, egyptian, greek, roman, }  and building_present_min_level market forum
+        {
+            capability
+            {
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                ludus_magnus
+            }
+        }
+        ludus_magnus requires factions { carthaginian, eastern, egyptian, greek, roman, }  and building_present_min_level market great_forum
+        {
+            capability
+            {
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building amphitheatres
+{
+    levels stone_amphitheatre urban_amphitheatre great_amphitheatre 
+    {
+        stone_amphitheatre requires factions { roman, }  and building_present_min_level market market
+        {
+            capability
+            {
+                recruit "roman velite gladiator"  0  requires factions { romans_brutii, slave, romans_julii, romans_scipii, romans_senate, } 
+                stage_games 1 requires factions { roman,}
+                happiness_bonus bonus 1
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                urban_amphitheatre
+            }
+        }
+        urban_amphitheatre requires factions { roman, }  and building_present_min_level market forum
+        {
+            capability
+            {
+                recruit "roman velite gladiator"  0  requires factions { romans_brutii, slave, romans_julii, romans_scipii, romans_senate, } 
+                recruit "roman samnite gladiator"  0  requires factions { romans_senate, romans_julii, slave, romans_brutii, romans_senate, } 
+                stage_games 2 requires factions { roman,}
+                happiness_bonus bonus 2
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                great_amphitheatre
+            }
+        }
+        great_amphitheatre requires factions { roman, }  and building_present_min_level market great_forum
+        {
+            capability
+            {
+                recruit "roman velite gladiator"  0  requires factions { romans_brutii, slave, romans_julii, romans_scipii, romans_senate, } 
+                recruit "roman samnite gladiator"  0  requires factions { romans_senate, romans_julii, slave, romans_brutii, romans_senate, } 
+                recruit "roman mirmillo gladiator"  0  requires factions { romans_scipii, slave, romans_julii, romans_brutii, romans_senate, } 
+                stage_games 3 requires factions { roman,}
+                happiness_bonus bonus 3
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building theatres
+{
+    levels odeon lyceum theatre 
+    {
+        odeon requires factions { greek, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                lyceum
+            }
+        }
+        lyceum requires factions { greek, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                theatre
+            }
+        }
+        theatre requires factions { greek, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building despotic_law
+{
+    levels execution_square secret_police_hq secret_police_network 
+    {
+        execution_square requires factions { carthaginian, eastern, egyptian, } 
+        {
+            capability
+            {
+                law_bonus bonus 2
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                secret_police_hq
+            }
+        }
+        secret_police_hq requires factions { carthaginian, eastern, egyptian, } 
+        {
+            capability
+            {
+                law_bonus bonus 3
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                secret_police_network
+            }
+        }
+        secret_police_network requires factions { carthaginian, eastern, egyptian, } 
+        {
+            capability
+            {
+                law_bonus bonus 4
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building caravans
+{
+    levels caravan frankincense_rd silk_rd 
+    {
+        caravan requires factions { eastern, } 
+        {
+            capability
+            {
+                trade_base_income_bonus bonus 2
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                frankincense_rd
+            }
+        }
+        frankincense_rd requires factions { eastern, } 
+        {
+            capability
+            {
+                trade_base_income_bonus bonus 3
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                silk_rd
+            }
+        }
+        silk_rd requires factions { eastern, } 
+        {
+            capability
+            {
+                trade_base_income_bonus bonus 4
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building taverns
+{
+    levels tavern bardic_circle 
+    {
+        tavern requires factions { barbarian, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                bardic_circle
+            }
+        }
+        bardic_circle requires factions { barbarian, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_battle
+{
+    levels temple_of_battle_shrine temple_of_battle_temple temple_of_battle_large_temple temple_of_battle_awesome_temple temple_of_battle_pantheon 
+    {
+        temple_of_battle_shrine requires factions { gauls, britons, dacia, scythia, thrace, macedon, pontus, romans_brutii, romans_scipii, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_battle_temple
+            }
+        }
+        temple_of_battle_temple requires factions { gauls, britons, dacia, scythia, thrace, macedon, pontus, romans_brutii, romans_scipii, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                recruits_morale_bonus bonus 1
+                recruits_exp_bonus bonus 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_battle_large_temple
+            }
+        }
+        temple_of_battle_large_temple requires factions { gauls, britons, dacia, scythia, thrace, macedon, pontus, romans_brutii, romans_scipii, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                recruits_morale_bonus bonus 2
+                recruits_exp_bonus bonus 1
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_battle_awesome_temple
+            }
+        }
+        temple_of_battle_awesome_temple requires factions { gauls, britons, dacia, scythia, thrace, macedon, pontus, romans_brutii, romans_scipii, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                recruits_morale_bonus bonus 3
+                recruits_exp_bonus bonus 2
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_battle_pantheon
+            }
+        }
+        temple_of_battle_pantheon requires factions { gauls, britons, dacia, scythia, thrace, macedon, pontus, romans_brutii, romans_scipii, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 7
+                recruits_morale_bonus bonus 4
+                recruits_exp_bonus bonus 3
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_battleforge
+{
+    levels temple_of_battleforge_shrine temple_of_battleforge_temple temple_of_battleforge_large_temple temple_of_battleforge_awesome_temple temple_of_battleforge_pantheon
+    {
+        temple_of_battleforge_shrine requires factions { germans, dacia, spain, gauls, armenia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_battleforge_temple
+            }
+        }
+        temple_of_battleforge_temple requires factions { germans, dacia, spain, gauls, armenia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                weapon_simple bonus 1
+                recruits_exp_bonus bonus 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_battleforge_large_temple
+            }
+        }
+        temple_of_battleforge_large_temple requires factions { germans, dacia, spain, gauls, armenia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                weapon_simple bonus 1
+                recruits_exp_bonus bonus 2
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_battleforge_awesome_temple
+            }
+        }
+        temple_of_battleforge_awesome_temple requires factions { germans, dacia, spain, gauls, armenia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                weapon_simple bonus 1
+                recruits_exp_bonus bonus 2
+                armour bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+		temple_of_battleforge_pantheon
+            }
+        }
+        temple_of_battleforge_pantheon requires factions { germans, dacia, spain, gauls, armenia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                weapon_simple bonus 1
+                weapon_bladed bonus 1
+                recruits_exp_bonus bonus 3
+                armour bonus 1
+                law_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_farming
+{
+    levels temple_of_farming_shrine temple_of_farming_temple temple_of_farming_large_temple temple_of_farming_awesome_temple temple_of_farming_pantheon 
+    {
+        temple_of_farming_shrine requires factions { germans, spain, carthage, macedon, seleucid, parthia, pontus, romans_julii, romans_scipii, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                farming_level bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_farming_temple
+            }
+        }
+        temple_of_farming_temple requires factions { germans, spain, carthage, macedon, seleucid, parthia, pontus, romans_julii, romans_scipii, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                farming_level bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_farming_large_temple
+            }
+        }
+        temple_of_farming_large_temple requires factions { germans, spain, carthage, macedon, seleucid, parthia, pontus, romans_julii, romans_scipii, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                farming_level bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_farming_awesome_temple
+            }
+        }
+        temple_of_farming_awesome_temple requires factions { germans, spain, carthage, macedon, seleucid, parthia, pontus, romans_julii, romans_scipii, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                farming_level bonus 4
+                population_loyalty_bonus bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_farming_pantheon
+            }
+        }
+        temple_of_farming_pantheon requires factions { germans, spain, carthage, macedon, seleucid, parthia, pontus, romans_julii, romans_scipii, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                farming_level bonus 5
+                law_bonus bonus 2
+                population_loyalty_bonus bonus 2
+                trade_base_income_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_fertility
+{
+    levels temple_of_fertility_shrine temple_of_fertility_temple temple_of_fertility_large_temple temple_of_fertility_awesome_temple temple_of_fertility_pantheon 
+    {
+        temple_of_fertility_shrine requires factions { dacia, germans, scythia, egyptian, thrace, greek_cities, armenia, pontus, romans_brutii, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                population_growth_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_fertility_temple
+            }
+        }
+        temple_of_fertility_temple requires factions { dacia, germans, scythia, egyptian, thrace, greek_cities, armenia, pontus, romans_brutii, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                population_growth_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_fertility_large_temple
+            }
+        }
+        temple_of_fertility_large_temple requires factions { dacia, germans, scythia, egyptian, thrace, greek_cities, armenia, pontus, romans_brutii, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                population_growth_bonus bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_fertility_awesome_temple
+            }
+        }
+        temple_of_fertility_awesome_temple requires factions { dacia, germans, scythia, egyptian, thrace, greek_cities, armenia, pontus, romans_brutii, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                population_growth_bonus bonus 4
+                recruits_morale_bonus bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_fertility_pantheon
+            }
+        }
+        temple_of_fertility_pantheon requires factions { dacia, germans, scythia, egyptian, thrace, greek_cities, armenia, pontus, romans_brutii, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 7
+                population_growth_bonus bonus 5
+                law_bonus bonus 2
+                recruits_morale_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_forge
+{
+    levels temple_of_forge_shrine temple_of_forge_temple temple_of_forge_large_temple temple_of_forge_awesome_temple temple_of_forge_pantheon 
+    {
+        temple_of_forge_shrine requires factions { dacia, seleucid, romans_scipii, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                weapon_simple bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_forge_temple
+            }
+        }
+        temple_of_forge_temple requires factions { dacia, seleucid, romans_scipii, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                weapon_simple bonus 1
+                weapon_bladed bonus 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_forge_large_temple
+            }
+        }
+        temple_of_forge_large_temple requires factions { dacia, seleucid, romans_scipii, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                weapon_simple bonus 1
+                weapon_bladed bonus 1
+                armour bonus 1
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_forge_awesome_temple
+            }
+        }
+        temple_of_forge_awesome_temple requires factions { dacia, seleucid, romans_scipii, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                weapon_simple bonus 1
+                weapon_bladed bonus 1
+                armour bonus 1
+                recruits_exp_bonus bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_forge_pantheon
+            }
+        }
+        temple_of_forge_pantheon requires factions { dacia, seleucid, romans_scipii, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                weapon_simple bonus 1
+                weapon_bladed bonus 1
+                armour bonus 1
+                recruits_exp_bonus bonus 2
+                law_bonus bonus 2
+                trade_base_income_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_fun
+{
+    levels temple_of_fun_shrine temple_of_fun_temple temple_of_fun_large_temple temple_of_fun_awesome_temple temple_of_fun_pantheon 
+    {
+        temple_of_fun_shrine requires factions { macedon, thrace, seleucid, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_fun_temple
+            }
+        }
+        temple_of_fun_temple requires factions { macedon, thrace, seleucid, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_fun_large_temple
+            }
+        }
+        temple_of_fun_large_temple requires factions { macedon, thrace, seleucid, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 6
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_fun_awesome_temple
+            }
+        }
+        temple_of_fun_awesome_temple requires factions { macedon, thrace, seleucid, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 8
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_fun_pantheon
+            }
+        }
+        temple_of_fun_pantheon requires factions { macedon, thrace, seleucid, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 10
+                population_growth_bonus bonus 2
+                law_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_governors
+{
+    levels temple_of_governors_shrine temple_of_governors_temple temple_of_governors_large_temple temple_of_governors_awesome_temple temple_of_governors_pantheon 
+    {
+        temple_of_governors_shrine requires factions { germans, pontus, macedon, romans_julii, parthia, armenia, carthage, numidia, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                law_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_governors_temple
+            }
+        }
+        temple_of_governors_temple requires factions { germans, pontus, macedon, romans_julii, parthia, armenia, carthage, numidia, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                law_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_governors_large_temple
+            }
+        }
+        temple_of_governors_large_temple requires factions { germans, pontus, macedon, romans_julii, parthia, armenia, carthage, numidia, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                law_bonus bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_governors_awesome_temple
+            }
+        }
+        temple_of_governors_awesome_temple requires factions { germans, pontus, macedon, romans_julii, parthia, armenia, carthage, numidia, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                law_bonus bonus 4
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_governors_pantheon
+            }
+        }
+        temple_of_governors_pantheon requires factions { germans, pontus, macedon, romans_julii, parthia, armenia, carthage, numidia, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                law_bonus bonus 5
+                farming_level bonus 2
+                recruits_exp_bonus bonus 2
+                weapon_missile bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_healing
+{
+    levels temple_of_healing_shrine temple_of_healing_temple temple_of_healing_large_temple temple_of_healing_awesome_temple temple_of_healing_pantheon 
+    {
+        temple_of_healing_shrine requires factions { britons, spain, egyptian, seleucid, thrace, greek_cities, parthia, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                population_health_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_healing_temple
+            }
+        }
+        temple_of_healing_temple requires factions { britons, spain, egyptian, seleucid, thrace, greek_cities, parthia, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                population_health_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_healing_large_temple
+            }
+        }
+        temple_of_healing_large_temple requires factions { britons, spain, egyptian, seleucid, thrace, greek_cities, parthia, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                population_health_bonus bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_healing_awesome_temple
+            }
+        }
+        temple_of_healing_awesome_temple requires factions { britons, spain, egyptian, seleucid, thrace, greek_cities, parthia, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                population_health_bonus bonus 4
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_healing_pantheon
+            }
+        }
+        temple_of_healing_pantheon requires factions { britons, spain, egyptian, seleucid, thrace, greek_cities, parthia, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                population_health_bonus bonus 5
+                trade_base_income_bonus bonus  2
+                recruits_exp_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_horse
+{
+    levels temple_of_horse_shrine temple_of_horse_temple temple_of_horse_large_temple temple_of_horse_awesome_temple temple_of_horse_pantheon 
+    {
+        temple_of_horse_shrine requires factions { dacia, spain, gauls, thrace, scythia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_horse_temple
+            }
+        }
+        temple_of_horse_temple requires factions { dacia, spain, gauls, thrace, scythia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                recruits_exp_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_horse_large_temple
+            }
+        }
+        temple_of_horse_large_temple requires factions { dacia, spain, gauls, thrace, scythia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                recruits_exp_bonus bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_horse_awesome_temple
+            }
+        }
+        temple_of_horse_awesome_temple requires factions { dacia, spain, gauls, thrace, scythia, }
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                recruits_exp_bonus bonus 3
+                trade_base_income_bonus bonus  1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_horse_pantheon
+            }
+        }
+        temple_of_horse_pantheon requires factions { dacia, spain, gauls, thrace, scythia, }
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                recruits_exp_bonus bonus 4
+                law_bonus bonus 2
+                trade_base_income_bonus bonus  2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_hunting
+{
+    levels temple_of_hunting_shrine temple_of_hunting_temple temple_of_hunting_large_temple temple_of_hunting_awesome_temple temple_of_hunting_pantheon 
+    {
+        temple_of_hunting_shrine requires factions { germans, spain, gauls, macedon, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                weapon_missile bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_hunting_temple
+            }
+        }
+        temple_of_hunting_temple requires factions { germans, spain, gauls, macedon, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                weapon_missile bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_hunting_large_temple
+            }
+        }
+        temple_of_hunting_large_temple requires factions { germans, spain, gauls, macedon, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                weapon_missile bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_hunting_awesome_temple
+            }
+        }
+        temple_of_hunting_awesome_temple requires factions { germans, spain, gauls, macedon, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                weapon_missile bonus 3
+                recruits_exp_bonus bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_hunting_pantheon
+            }
+        }
+        temple_of_hunting_pantheon requires factions { germans, spain, gauls, macedon, romans_julii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                weapon_missile bonus 3
+                law_bonus bonus 2
+                farming_level bonus 2
+                recruits_exp_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_justice
+{
+    levels temple_of_justice_shrine temple_of_justice_temple temple_of_justice_large_temple temple_of_justice_awesome_temple temple_of_justice_pantheon 
+    {
+        temple_of_justice_shrine requires factions { spain, gauls, egyptian, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                law_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_justice_temple
+            }
+        }
+        temple_of_justice_temple requires factions { spain, gauls, egyptian, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                law_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_justice_large_temple
+            }
+        }
+        temple_of_justice_large_temple requires factions { spain, gauls, egyptian, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                law_bonus bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_justice_awesome_temple
+            }
+        }
+        temple_of_justice_awesome_temple requires factions { spain, gauls, egyptian, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                law_bonus bonus 4
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_justice_pantheon
+            }
+        }
+        temple_of_justice_pantheon requires factions { spain, gauls, egyptian, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 7
+                law_bonus bonus 5
+                population_growth_bonus bonus 2
+                population_health_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_law
+{
+    levels temple_of_law_shrine temple_of_law_temple temple_of_law_large_temple temple_of_law_awesome_temple temple_of_law_pantheon 
+    {
+        temple_of_law_shrine requires factions { scythia, egyptian, seleucid, parthia, romans_scipii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                law_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_law_temple
+            }
+        }
+        temple_of_law_temple requires factions { scythia, egyptian, seleucid, parthia, romans_scipii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                law_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_law_large_temple
+            }
+        }
+        temple_of_law_large_temple requires factions { scythia, egyptian, seleucid, parthia, romans_scipii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                law_bonus bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_law_awesome_temple
+            }
+        }
+        temple_of_law_awesome_temple requires factions { scythia, egyptian, seleucid, parthia, romans_scipii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                law_bonus bonus 4
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_law_pantheon
+            }
+        }
+        temple_of_law_pantheon requires factions { scythia, egyptian, seleucid, parthia, romans_scipii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                law_bonus bonus 5
+                weapon_simple bonus 1
+                weapon_bladed bonus 1
+                armour bonus 1
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_leadership
+{
+    levels temple_of_leadership_shrine temple_of_leadership_temple temple_of_leadership_large_temple temple_of_leadership_awesome_temple temple_of_leadership_pantheon 
+    {
+        temple_of_leadership_shrine requires factions { britons, greek_cities, armenia, romans_scipii, romans_senate, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                law_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_leadership_temple
+            }
+        }
+        temple_of_leadership_temple requires factions { britons, greek_cities, armenia, romans_scipii, romans_senate, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                law_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_leadership_large_temple
+            }
+        }
+        temple_of_leadership_large_temple requires factions { britons, greek_cities, armenia, romans_scipii, romans_senate, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                law_bonus bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_leadership_awesome_temple
+            }
+        }
+        temple_of_leadership_awesome_temple requires factions { britons, greek_cities, armenia, romans_scipii, romans_senate, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                law_bonus bonus 4
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_leadership_pantheon
+            }
+        }
+        temple_of_leadership_pantheon requires factions { britons, greek_cities, armenia, romans_scipii, romans_senate, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 7
+                law_bonus bonus 5
+                population_growth_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_love
+{
+    levels temple_of_love_shrine temple_of_love_temple temple_of_love_large_temple temple_of_love_awesome_temple temple_of_love_pantheon 
+    {
+        temple_of_love_shrine requires factions { germans, pontus, greek_cities, armenia, romans_julii, carthage, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                population_growth_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_love_temple
+            }
+        }
+        temple_of_love_temple requires factions { germans, pontus, greek_cities, armenia, romans_julii, carthage, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                population_growth_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_love_large_temple
+            }
+        }
+        temple_of_love_large_temple requires factions { germans, pontus, greek_cities, armenia, romans_julii, carthage, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                population_growth_bonus bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_love_awesome_temple
+            }
+        }
+        temple_of_love_awesome_temple requires factions { germans, pontus, greek_cities, armenia, romans_julii, carthage, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                population_growth_bonus bonus 4
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_love_pantheon
+            }
+        }
+        temple_of_love_pantheon requires factions { germans, pontus, greek_cities, armenia, romans_julii, carthage, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 7
+                population_growth_bonus bonus 5
+                law_bonus bonus 2
+                trade_base_income_bonus bonus 2
+                recruits_exp_bonus bonus 1
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_naval
+{
+    levels temple_of_naval_shrine temple_of_naval_temple temple_of_naval_large_temple temple_of_naval_awesome_temple temple_of_naval_pantheon 
+    {
+        temple_of_naval_shrine requires factions { britons, romans_scipii, greek_cities, carthage, }  and building_present_min_level port_buildings port
+        {
+            capability
+            {
+                recruit "naval boats"  1  requires factions { barbarian, } 
+                recruit "naval biremes"  1  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval pirate ships"  1  requires factions { slave, }
+                happiness_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_naval_temple
+            }
+        }
+        temple_of_naval_temple requires factions { britons, romans_scipii, greek_cities, carthage, } 
+        {
+            capability
+            {
+                recruit "naval boats"  2  requires factions { barbarian, } 
+                recruit "naval biremes"  2  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval pirate ships"  2  requires factions { slave, }
+                happiness_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_naval_large_temple
+            }
+        }
+        temple_of_naval_large_temple requires factions { britons, romans_scipii, greek_cities, carthage, } and building_present_min_level port_buildings shipwright
+        {
+            capability
+            {
+                recruit "naval boats"  3  requires factions { barbarian, } 
+                recruit "naval large boats"  1  requires factions { barbarian, } 
+                recruit "naval biremes"  3  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval triremes"  1  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval pirate ships"  3  requires factions { slave, }
+                happiness_bonus bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_naval_awesome_temple
+            }
+        }
+        temple_of_naval_awesome_temple requires factions { britons, romans_scipii, greek_cities, carthage, } and building_present_min_level port_buildings dockyard
+        {
+            capability
+            {
+                recruit "naval boats"  4  requires factions { barbarian, } 
+                recruit "naval large boats"  2  requires factions { barbarian, } 
+                recruit "naval biremes"  4  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval triremes"  2  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval quinquiremes"  1  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval corvus quinquireme"  0  requires factions { roman, greek, carthaginian, eastern, egyptian, } 
+                recruit "naval pirate ships"  4  requires factions { slave, }
+                happiness_bonus bonus 4
+                trade_base_income_bonus bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_naval_pantheon
+            }
+        }
+        temple_of_naval_pantheon requires factions { britons, romans_scipii, greek_cities, carthage, } 
+        {
+            capability
+            {
+                recruit "naval boats"  5  requires factions { barbarian, } 
+                recruit "naval large boats"  3  requires factions { barbarian, } 
+                recruit "naval biremes"  5  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval triremes"  3  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval quinquiremes"  2  requires factions { carthaginian, eastern, egyptian, greek, roman, } 
+                recruit "naval corvus quinquireme"  1  requires factions { roman, greek, carthaginian, eastern, egyptian, } 
+                recruit "naval deceres"  0  requires factions { roman, greek, carthaginian, eastern, egyptian, } 
+                recruit "naval pirate ships"  5  requires factions { slave, }
+                happiness_bonus bonus 5
+                trade_base_income_bonus bonus 2
+                law_bonus bonus 2
+                weapon_simple bonus 1
+                weapon_bladed bonus 1
+                armour bonus 1
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_trade
+{
+    levels temple_of_trade_shrine temple_of_trade_temple temple_of_trade_large_temple temple_of_trade_awesome_temple temple_of_trade_pantheon 
+    {
+        temple_of_trade_shrine requires factions { britons, carthaginian, greek_cities, romans_brutii, armenia, parthia, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                trade_base_income_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_trade_temple
+            }
+        }
+        temple_of_trade_temple requires factions { britons, carthaginian, greek_cities, romans_brutii, armenia, parthia, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                trade_base_income_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_trade_large_temple
+            }
+        }
+        temple_of_trade_large_temple requires factions { britons, carthaginian, greek_cities, romans_brutii, armenia, parthia, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                trade_base_income_bonus bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_trade_awesome_temple
+            }
+        }
+        temple_of_trade_awesome_temple requires factions { britons, carthaginian, greek_cities, romans_brutii, armenia, parthia, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                trade_base_income_bonus bonus 4
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_trade_pantheon
+            }
+        }
+        temple_of_trade_pantheon requires factions { britons, carthaginian, greek_cities, romans_brutii, armenia, parthia, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                trade_base_income_bonus bonus 5
+                population_health_bonus bonus 2
+                recruits_exp_bonus bonus 1
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_victory
+{
+    levels temple_of_victory_shrine temple_of_victory_temple temple_of_victory_large_temple temple_of_victory_awesome_temple temple_of_victory_pantheon 
+    {
+        temple_of_victory_shrine requires factions { britons, greek_cities, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_morale_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_victory_temple
+            }
+        }
+        temple_of_victory_temple requires factions { britons, greek_cities, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                recruits_exp_bonus bonus 1
+                recruits_morale_bonus bonus 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_victory_large_temple
+            }
+        }
+        temple_of_victory_large_temple requires factions { britons, greek_cities, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                recruits_exp_bonus bonus 2
+                recruits_morale_bonus bonus 1
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_victory_awesome_temple
+            }
+        }
+        temple_of_victory_awesome_temple requires factions { britons, greek_cities, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                recruits_exp_bonus bonus 2
+                recruits_morale_bonus bonus 2
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_victory_pantheon
+            }
+        }
+        temple_of_victory_pantheon requires factions { britons, greek_cities, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                recruits_exp_bonus 2
+                recruits_morale_bonus bonus 3
+                population_growth_bonus bonus 2
+                law_bonus bonus 2
+                trade_base_income_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_violence
+{
+    levels temple_of_violence_shrine temple_of_violence_temple temple_of_violence_large_temple temple_of_violence_awesome_temple temple_of_violence_pantheon 
+    {
+        temple_of_violence_shrine requires factions { scythia, pontus, macedon, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_violence_temple
+            }
+        }
+        temple_of_violence_temple requires factions { scythia, pontus, macedon, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                recruits_exp_bonus bonus 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_violence_large_temple
+            }
+        }
+        temple_of_violence_large_temple requires factions { scythia, pontus, macedon, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                recruits_exp_bonus bonus 2
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_violence_awesome_temple
+            }
+        }
+        temple_of_violence_awesome_temple requires factions { scythia, pontus, macedon, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                recruits_exp_bonus bonus 3
+                law_bonus bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_violence_pantheon
+            }
+        }
+        temple_of_violence_pantheon requires factions { scythia, pontus, macedon, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                recruits_exp_bonus bonus 3
+                recruits_morale_bonus bonus 1
+                trade_base_income_bonus bonus 2
+                population_health_bonus bonus 1
+                law_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_viking
+{
+    levels temple_of_viking_shrine temple_of_viking_temple temple_of_viking_large_temple temple_of_viking_awesome_temple temple_of_viking_pantheon
+    {
+        temple_of_viking_shrine requires factions { germans, carthage, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_viking_temple
+            }
+        }
+        temple_of_viking_temple requires factions { germans, carthage, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                recruits_exp_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_viking_large_temple
+            }
+        }
+        temple_of_viking_large_temple requires factions { germans, carthage, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                recruits_exp_bonus bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+		temple_of_viking_awesome_temple
+            }
+        }
+        temple_of_viking_awesome_temple requires factions { germans, carthage, }
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                recruits_exp_bonus bonus 3
+                recruits_morale_bonus bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_viking_pantheon
+            }
+        }
+        temple_of_viking_pantheon requires factions { germans, carthage, }
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                recruits_exp_bonus bonus 4
+                recruits_morale_bonus bonus 2
+                law_bonus bonus 2
+                population_growth_bonus bonus 1
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_home
+{
+    levels temple_of_home_shrine temple_of_home_temple temple_of_home_large_temple temple_of_home_awesome_temple temple_of_home_pantheon
+    {
+        temple_of_home_shrine requires factions { dacia, scythia, thrace, romans_brutii, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                population_loyalty_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_home_temple
+            }
+        }
+        temple_of_home_temple requires factions { dacia, scythia, thrace, romans_brutii, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                population_loyalty_bonus bonus 1
+                population_health_bonus bonus 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_home_large_temple
+            }
+        }
+        temple_of_home_large_temple requires factions { dacia, scythia, thrace, romans_brutii, egypt, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                population_loyalty_bonus bonus 2
+                farming_level bonus 1
+                population_health_bonus bonus 1
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+		temple_of_home_awesome_temple
+            }
+        }
+        temple_of_home_awesome_temple requires factions { dacia, scythia, thrace, romans_brutii, egypt, }
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                population_loyalty_bonus bonus 3
+                farming_level bonus 1
+                trade_base_income_bonus bonus  1
+                population_health_bonus bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_home_pantheon
+            }
+        }
+        temple_of_home_pantheon requires factions { dacia, scythia, thrace, romans_brutii, egypt, }
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                population_loyalty_bonus bonus 4
+                farming_level bonus 2
+                trade_base_income_bonus bonus  2
+                population_health_bonus bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_nature
+{
+    levels temple_of_nature_shrine temple_of_nature_temple temple_of_nature_large_temple temple_of_nature_awesome_temple temple_of_nature_pantheon
+    {
+        temple_of_nature_shrine requires factions { britons, gauls, seleucid, parthia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                farming_level bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_nature_temple
+            }
+        }
+        temple_of_nature_temple requires factions { britons, gauls, seleucid, parthia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                farming_level bonus 1
+                population_health_bonus bonus 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_nature_large_temple
+            }
+        }
+        temple_of_nature_large_temple requires factions { britons, gauls, seleucid, parthia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                farming_level bonus 2
+                population_health_bonus bonus 1
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+		temple_of_nature_awesome_temple
+            }
+        }
+        temple_of_nature_awesome_temple requires factions { britons, gauls, seleucid, parthia, }
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                farming_level bonus 2
+                population_health_bonus bonus 2
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_nature_pantheon
+            }
+        }
+        temple_of_nature_pantheon requires factions { britons, gauls, seleucid,  parthia, }
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                population_health_bonus bonus 3
+                farming_level bonus 3
+                law_bonus bonus 2
+                weapon_simple bonus 1
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_sun
+{
+    levels temple_of_sun_shrine temple_of_sun_temple temple_of_sun_large_temple temple_of_sun_awesome_temple temple_of_sun_pantheon
+    {
+        temple_of_sun_shrine requires factions { gauls, scythia, macedon, armenia, romans_julii, romans_scipii, carthage, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                population_health_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_sun_temple
+            }
+        }
+        temple_of_sun_temple requires factions { gauls, scythia, macedon, armenia, romans_julii, romans_scipii, carthage, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                farming_level bonus 1
+                population_health_bonus bonus 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_sun_large_temple
+            }
+        }
+        temple_of_sun_large_temple requires factions { gauls, scythia, macedon, armenia, romans_julii, romans_scipii, carthage, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                farming_level bonus 1
+                population_health_bonus bonus 1
+                weapon_missile bonus 1
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+		temple_of_sun_awesome_temple
+            }
+        }
+        temple_of_sun_awesome_temple requires factions { gauls, scythia, macedon, armenia, romans_julii, romans_scipii, carthage, }
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                farming_level bonus 1
+                population_health_bonus bonus 1
+                weapon_missile bonus 1
+                armour bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_sun_pantheon
+            }
+        }
+        temple_of_sun_pantheon requires factions { gauls, scythia, macedon, armenia, romans_julii, romans_scipii, carthage, }
+        {
+            capability
+            {
+                happiness_bonus bonus 7
+                population_health_bonus bonus 2
+                farming_level bonus 2
+                law_bonus bonus 2
+                weapon_missile bonus 1
+                armour bonus 1
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_moon
+{
+    levels temple_of_moon_shrine temple_of_moon_temple temple_of_moon_large_temple temple_of_moon_awesome_temple temple_of_moon_pantheon
+    {
+        temple_of_moon_shrine requires factions { dacia, thrace, pontus, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                farming_level bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_moon_temple
+            }
+        }
+        temple_of_moon_temple requires factions { dacia, thrace, pontus, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                farming_level bonus 1
+                population_health_bonus bonus 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_moon_large_temple
+            }
+        }
+        temple_of_moon_large_temple requires factions { dacia, thrace, pontus, numidia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                farming_level bonus 1
+                population_health_bonus bonus 1
+                weapon_missile bonus 1
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+		temple_of_moon_awesome_temple
+            }
+        }
+        temple_of_moon_awesome_temple requires factions { dacia, thrace, pontus, numidia, }
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                farming_level bonus 2
+                population_health_bonus bonus 2
+                weapon_missile bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_moon_pantheon
+            }
+        }
+        temple_of_moon_pantheon requires factions { dacia, thrace, pontus, numidia, }
+        {
+            capability
+            {
+                happiness_bonus bonus 7
+                population_health_bonus bonus 3
+                farming_level bonus 3
+                law_bonus bonus 2
+                weapon_missile bonus 2
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_defender
+{
+    levels temple_of_defender_shrine temple_of_defender_temple temple_of_defender_large_temple temple_of_defender_awesome_temple temple_of_defender_pantheon
+    {
+        temple_of_defender_shrine requires factions { spain, parthia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                population_loyalty_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_defender_temple
+            }
+        }
+        temple_of_defender_temple requires factions { spain, parthia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                population_loyalty_bonus bonus 1
+                population_health_bonus bonus 1
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_defender_large_temple
+            }
+        }
+        temple_of_defender_large_temple requires factions { spain, parthia, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                population_loyalty_bonus bonus 1
+                population_health_bonus bonus 1
+                armour bonus 1
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+		temple_of_defender_awesome_temple
+            }
+        }
+        temple_of_defender_awesome_temple requires factions { spain, parthia, }
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                population_loyalty_bonus bonus 2
+                population_health_bonus bonus 1
+                armour bonus 1
+                recruits_exp_bonus 1
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_defender_pantheon
+            }
+        }
+        temple_of_defender_pantheon requires factions { spain, parthia, }
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                population_loyalty_bonus bonus 3
+                population_health_bonus bonus 2
+                law_bonus bonus 2
+                armour bonus 2
+                recruits_exp_bonus 2
+                trade_base_income_bonus bonus  1
+                population_growth_bonus bonus 1
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building temple_of_underworld
+{
+    levels temple_of_underworld_shrine temple_of_underworld_temple temple_of_underworld_large_temple temple_of_underworld_awesome_temple temple_of_underworld_pantheon 
+    {
+        temple_of_underworld_shrine requires factions { seleucid, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                law_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                temple_of_underworld_temple
+            }
+        }
+        temple_of_underworld_temple requires factions { seleucid, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                law_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                temple_of_underworld_large_temple
+            }
+        }
+        temple_of_underworld_large_temple requires factions { seleucid, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                law_bonus bonus 3
+                mine_resource 1
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+                temple_of_underworld_awesome_temple
+            }
+        }
+        temple_of_underworld_awesome_temple requires factions { seleucid, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 4
+                law_bonus bonus 4
+                mine_resource 2
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+                temple_of_underworld_pantheon
+            }
+        }
+        temple_of_underworld_pantheon requires factions { seleucid, romans_brutii, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 5
+                law_bonus bonus 5
+                trade_base_income_bonus bonus 1
+                farming_level bonus 1
+                weapon_bladed bonus 1
+                mine_resource 3
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building priestly_community_01
+{
+    levels circle_of_priests_01 warforge_halls nature_halls defenders_halls halls_of_law halls_of_cruelty leadership_halls halls_of_victory
+    {
+        circle_of_priests_01 requires factions { barbarian, armenia, carthage, romans_julii, romans_brutii, romans_scipii, } and not building_present_min_level priestly_community_02 circle_of_priests_02 and building_present_min_level temple_of_battleforge temple_of_battleforge_shrine or building_present_min_level temple_of_farming temple_of_farming_shrine or building_present_min_level temple_of_fertility temple_of_fertility_shrine or building_present_min_level temple_of_fun temple_of_fun_shrine or building_present_min_level temple_of_law temple_of_law_shrine or building_present_min_level temple_of_justice temple_of_justice_shrine or building_present_min_level temple_of_leadership temple_of_leadership_shrine or building_present_min_level temple_of_violence temple_of_violence_shrine or building_present_min_level temple_of_trade temple_of_trade_shrine or building_present_min_level temple_of_victory temple_of_victory_shrine or building_present_min_level temple_of_defender temple_of_defender_shrine or building_present_min_level temple_of_nature temple_of_nature_shrine
+        {
+            capability
+            {
+                population_loyalty_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+		warforge_halls
+		nature_halls
+		defenders_halls
+		halls_of_law
+		halls_of_cruelty
+		leadership_halls
+		halls_of_victory
+            }
+        }
+        warforge_halls requires factions { spain, gauls, germans, dacia, } and not building_present_min_level priestly_community_02 circle_of_priests_02 and building_present_min_level temple_of_battleforge temple_of_battleforge_temple and building_present_min_level barracks muster_field
+        {
+            capability
+            {
+                recruit "barb naked fanatics gauls"  0  requires factions { germans, spain, }
+                recruit "barb naked fanatics gauls"  1  requires factions { gauls, dacia, }
+                recruit "barb naked fanatics gauls"  0  requires factions { scythia, britons, slave, thrace, armenia, }
+                population_loyalty_bonus bonus 1
+            }
+            construction  2
+            cost 800
+            settlement_min large_town
+            upgrades
+            {
+            }
+        }
+        nature_halls requires factions { britons, gauls, } and not building_present_min_level priestly_community_02 circle_of_priests_02 and building_present_min_level temple_of_nature temple_of_nature_large_temple and building_present_min_level barracks muster_field
+        {
+            capability
+            {
+                recruit "barb druids gaul"  0  requires factions { gauls, britons, } 
+                recruit "barb druids gaul"  0  requires factions { dacia, germans, scythia, spain, slave, thrace, armenia, } 
+                population_loyalty_bonus bonus 1
+            }
+            construction  2
+            cost 800
+            settlement_min city
+            upgrades
+            {
+            }
+        }
+        defenders_halls requires factions { spain, } and not building_present_min_level priestly_community_02 circle_of_priests_02 and building_present_min_level temple_of_defender temple_of_defender_large_temple and building_present_min_level barracks muster_field
+        {
+             capability
+             {
+                recruit "spanish bull warriors"  0  requires factions { spain, } 
+                recruit "spanish bull warriors"  0  requires factions { carthage, numidia, slave, greek_cities, } 
+                population_loyalty_bonus bonus 1
+             }
+             construction  2
+             cost 800
+             settlement_min city
+             upgrades
+             {
+             }
+        }
+        halls_of_law requires factions { scythia, } and not building_present_min_level priestly_community_02 circle_of_priests_02 and building_present_min_level temple_of_law temple_of_law_large_temple and building_present_min_level equestrian stables and building_present_min_level missiles target_field
+        {
+            capability
+            {
+                recruit "barb scythian noblewomen scythian"  0  requires factions { scythia, } 
+                recruit "barb scythian noblewomen scythian"  0  requires factions { britons, dacia, gauls, germans, spain, slave, thrace, armenia, } 
+                population_loyalty_bonus bonus 1
+            }
+            construction  2
+            cost 800
+            settlement_min city
+            upgrades
+            {
+            }
+        }
+        halls_of_cruelty requires factions { scythia, } and not building_present_min_level priestly_community_02 circle_of_priests_02 and building_present_min_level temple_of_violence temple_of_violence_temple and building_present_min_level equestrian stables
+        {
+            capability
+            {
+                recruit "barb head hunting maidens scythian"  0  requires factions { scythia, } 
+                recruit "barb head hunting maidens scythian"  0  requires factions { britons, dacia, gauls, germans, spain, slave, thrace, armenia, } 
+                population_loyalty_bonus bonus 1
+            }
+            construction  2
+            cost 800
+            settlement_min large_town
+            upgrades
+            {
+            }
+        }
+        leadership_halls requires factions { britons, } and not building_present_min_level priestly_community_02 circle_of_priests_02 and building_present_min_level temple_of_leadership temple_of_leadership_temple and building_present_min_level barracks muster_field
+        {
+            capability
+            {
+                recruit "warband woad briton"  1  requires factions { britons, }
+                recruit "warband woad briton"  0  requires factions { dacia, gauls, germans, scythia, spain, slave, thrace, armenia, }
+                population_loyalty_bonus bonus 1
+            }
+            construction  2
+            cost 800
+            settlement_min large_town
+            upgrades
+            {
+            }
+        }
+        halls_of_victory requires factions { britons, } and not building_present_min_level priestly_community_02 circle_of_priests_02 and building_present_min_level temple_of_victory temple_of_victory_temple and building_present_min_level barracks muster_field
+        {
+            capability
+            {
+                recruit "warband hurler briton"  1  requires factions { britons, } 
+                recruit "warband hurler briton"  0  requires factions { dacia, gauls, germans, scythia, spain, slave, thrace, armenia, }
+                population_loyalty_bonus bonus 1
+            }
+            construction  2
+            cost 800
+            settlement_min large_town
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building priestly_community_02
+{
+    levels circle_of_priests_02 halls_of_battle palaces_of_rulers hunting_halls halls_of_love halls_of_conquest halls_of_the_moon
+    {
+        circle_of_priests_02 requires factions { barbarian, armenia, carthage, romans_julii, romans_brutii, romans_scipii, } and not building_present_min_level priestly_community_01 circle_of_priests_01 and building_present_min_level temple_of_battle temple_of_battle_shrine or building_present_min_level temple_of_forge temple_of_forge_shrine or building_present_min_level temple_of_governors temple_of_governors_shrine or building_present_min_level temple_of_healing temple_of_healing_shrine or building_present_min_level temple_of_horse temple_of_horse_shrine or building_present_min_level temple_of_hunting temple_of_hunting_shrine or building_present_min_level temple_of_love temple_of_love_shrine or building_present_min_level temple_of_viking temple_of_viking_shrine or building_present_min_level temple_of_home temple_of_home_shrine or building_present_min_level temple_of_sun temple_of_sun_shrine or building_present_min_level temple_of_moon temple_of_moon_shrine or building_present_min_level temple_of_underworld temple_of_underworld_shrine
+        {
+            capability
+            {
+                population_loyalty_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+		halls_of_battle
+		palaces_of_rulers
+		hunting_halls
+		halls_of_love
+		halls_of_conquest
+		halls_of_the_moon
+            }
+        }
+        halls_of_battle requires factions { romans_julii, romans_brutii, romans_scipii, } and not building_present_min_level priestly_community_01 circle_of_priests_01 and building_present_min_level temple_of_battle temple_of_battle_awesome_temple and building_present_min_level barracks muster_field
+        {
+            capability
+            {
+                recruit "roman arcani"  0  requires factions { romans_scipii, romans_julii, romans_brutii, romans_senate, } 
+                recruit "roman arcani"  0  requires factions { slave, macedon, } 
+                recruit "barb naked fanatics gauls"  0  requires factions { germans, spain, gauls, dacia, scythia, britons, thrace, armenia, }
+                recruit "carthaginian sacred band infantry"  0  requires factions { carthage, } 
+                population_loyalty_bonus bonus 1
+            }
+            construction  2
+            cost 800
+            settlement_min large_city
+            upgrades
+            {
+            }
+        }
+        palaces_of_rulers requires factions { carthage, } and not building_present_min_level priestly_community_01 circle_of_priests_01 and building_present_min_level temple_of_governors temple_of_governors_awesome_temple and building_present_min_level barracks muster_field
+        {
+            capability
+            {
+                recruit "carthaginian sacred band infantry"  0  requires factions { carthage, } 
+                recruit "carthaginian sacred band infantry"  0  requires factions { spain, numidia, slave, greek_cities, macedon, seleucid, thrace, pontus, egypt, } 
+                recruit "barb naked fanatics gauls"  0  requires factions { germans, gauls, dacia, scythia, britons, armenia, }
+                recruit "roman arcani"  0  requires factions { romans_scipii, romans_julii, romans_brutii, romans_senate, } 
+                population_loyalty_bonus bonus 1
+            }
+            construction  2
+            cost 800
+            settlement_min large_city
+            upgrades
+            {
+            }
+        }
+        hunting_halls requires factions { germans, } and not building_present_min_level priestly_community_01 circle_of_priests_01 and building_present_min_level temple_of_hunting temple_of_hunting_large_temple and building_present_min_level equestrian stables
+        {
+             capability
+             {
+                recruit "barb gothic cavalry german"  0  requires factions { germans, } 
+                population_loyalty_bonus bonus 1
+             }
+             construction  2
+             cost 800
+             settlement_min city
+             upgrades
+             {
+             }
+        }
+        halls_of_love requires factions { germans, } and not building_present_min_level priestly_community_01 circle_of_priests_01 and building_present_min_level temple_of_love temple_of_love_temple and building_present_min_level barracks muster_field
+        {
+            capability
+            {
+                recruit "barb screeching women german"  0  requires factions { germans, } 
+                recruit "barb screeching women german"  0  requires factions { gauls, dacia, scythia, britons, spain, slave, thrace, armenia, } 
+                population_loyalty_bonus bonus 1
+            }
+            construction  2
+            cost 800
+            settlement_min large_town
+            upgrades
+            {
+            }
+        }
+        halls_of_conquest requires factions { germans, } and not building_present_min_level priestly_community_01 circle_of_priests_01 and building_present_min_level temple_of_viking temple_of_viking_large_temple and building_present_min_level barracks muster_field
+        {
+            capability
+            {
+                recruit "barb berserker german"  0  requires factions { germans, } 
+                recruit "barb berserker german"  0  requires factions { gauls, dacia, scythia, britons, spain, slave, thrace, armenia, } 
+                population_loyalty_bonus bonus 1
+            }
+            construction  2
+            cost 800
+            settlement_min city
+            upgrades
+            {
+            }
+        }
+        halls_of_the_moon requires factions { slave, scythia, armenia, } and not building_present_min_level priestly_community_01 circle_of_priests_01 and building_present_min_level temple_of_moon temple_of_moon_temple and building_present_min_level equestrian stables and building_present_min_level missiles target_field and building_present_min_level smith blacksmith
+        {
+            capability
+            {
+                recruit "rebel amazon chariots"  0  requires factions { slave, barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                population_loyalty_bonus bonus 1
+            }
+            construction  2
+            cost 800
+            settlement_min large_town
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building fighting_circle
+{
+    levels fighting_circle_01 fighting_halls_of_night
+    {
+        fighting_circle_01 requires factions { barbarian, } ;and not building_present_min_level management_peasant lock_plug
+        {
+            capability
+            {
+                law_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                fighting_halls_of_night
+            }
+        }
+        fighting_halls_of_night  requires factions { germans, } and not building_present_min_level management_peasant lock_plug and building_present_min_level barracks city_barracks and building_present_min_level taverns bardic_circle
+        {
+             capability
+             {
+                recruit "barb night raiders german"  0  requires factions { germans, }
+                recruit "barb night raiders german"  0  requires factions { gauls, dacia, scythia, britons, spain, slave, thrace, armenia, }
+                law_bonus bonus 1
+             }
+             construction  3
+             cost 1600
+             settlement_min city
+             upgrades
+             {
+             }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building management_peasant
+{
+    levels commune_peasant_01 commune_peasant_02 call_peasant common_management lock_plug
+    {
+        commune_peasant_01 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                taxable_income_bonus bonus 3
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+		commune_peasant_02
+		call_peasant 
+                common_management 
+		lock_plug
+            }
+        }
+        commune_peasant_02 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                taxable_income_bonus bonus 3
+		population_loyalty_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+            }
+        }
+        call_peasant requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                recruit "barb peasant"  0  requires factions { britons, dacia, gauls, germans, scythia, } 
+                recruit "carthaginian peasant"  0  requires factions { spain, carthage, numidia, eastern, } 
+                recruit "egyptian peasant"  0  requires factions { egyptian, } 
+                recruit "greek peasant"  0  requires factions { greek, roman, }
+                taxable_income_bonus bonus 3
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+            }
+        }
+        common_management requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+        {
+            capability
+            {
+                taxable_income_bonus bonus 6
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+            }
+        }
+        lock_plug requires factions {  } 
+        {
+            capability
+            {
+                taxable_income_bonus bonus 3
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building population_adjustment
+{
+    levels control_growth_of_population resettlement_01 resettlement_02 resettlement_03 resettlement_04 suburbs_peasant villages_peasant towns_peasant cities_peasant
+    {
+        control_growth_of_population requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management
+        {
+            capability
+            {
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+		resettlement_01
+		suburbs_peasant
+            }
+        }
+        resettlement_01 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management
+        {
+            capability
+            {
+                population_growth_bonus bonus 2
+                taxable_income_bonus bonus 3
+            }
+            construction 1
+            cost 400
+            settlement_min town
+            upgrades
+            {
+                resettlement_02
+            }
+        }
+        resettlement_02 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management
+        {
+            capability
+            {
+                population_growth_bonus bonus 4
+                taxable_income_bonus bonus 6
+            }
+            construction 2
+            cost 800
+            settlement_min large_town
+            upgrades
+            {
+                resettlement_03
+            }
+        }
+        resettlement_03 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management
+        {
+            capability
+            {
+                population_growth_bonus bonus 6
+                taxable_income_bonus bonus 9
+            }
+            construction 3
+            cost 1600
+            settlement_min city
+            upgrades
+            {
+		resettlement_04
+            }
+        }
+        resettlement_04 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management
+        {
+            capability
+            {
+                population_growth_bonus bonus 8
+                taxable_income_bonus bonus 12
+            }
+            construction 5
+            cost 3200
+            settlement_min large_city
+            upgrades
+            {
+            }
+        }
+        suburbs_peasant requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management
+        {
+            capability
+            {
+                population_growth_bonus bonus -2
+                taxable_income_bonus bonus -3
+            }
+            construction  1
+            cost 400
+            settlement_min town
+            upgrades
+            {
+                villages_peasant
+            }
+        }
+        villages_peasant requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management
+        {
+            capability
+            {
+                population_growth_bonus bonus -4
+                taxable_income_bonus bonus -6
+            }
+            construction  2
+            cost 800
+            settlement_min large_town
+            upgrades
+            {
+                towns_peasant
+            }
+        }
+        towns_peasant  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management
+        {
+             capability
+             {
+                population_growth_bonus bonus -6
+                taxable_income_bonus bonus -9
+             }
+             construction  3
+             cost 1600
+             settlement_min city
+             upgrades
+             {
+                 cities_peasant
+             }
+        }
+        cities_peasant requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management
+        {
+            capability
+            {
+                population_growth_bonus bonus -8
+                taxable_income_bonus bonus -12
+            }
+            construction  5
+            cost 3200
+            settlement_min large_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building guild_center
+{
+    levels guild_center_00 mercenary_guild_01 mercenary_guild_02 mercenary_guild_03 mercenary_guild_04 veterans_guild_01 veterans_guild_02 veterans_guild_03
+    {
+        guild_center_00 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management
+        {
+            capability
+            {
+                taxable_income_bonus bonus 3
+            }
+            construction 1
+            cost 400
+            settlement_min town
+            upgrades
+            {
+                mercenary_guild_01
+		veterans_guild_01
+            }
+        }
+        mercenary_guild_01 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management and building_present_min_level barracks muster_field and building_present_min_level missiles target_field
+        {
+            capability
+            {
+;-------- 1 ------------
+                recruit "merc barbarian infantry"  0 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc horse archers"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc eastern infantry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+;-----------------------
+		population_loyalty_bonus bonus -1
+                taxable_income_bonus bonus 3
+            }
+            construction 1
+            cost 400
+            settlement_min town
+            upgrades
+            {
+                mercenary_guild_02
+            }
+        }
+        mercenary_guild_02 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management and building_present_min_level equestrian stables and building_present_min_level barracks militia_barracks and building_present_min_level missiles practice_field
+        {
+            capability
+            {
+;-------- 1 ------------
+                recruit "merc barbarian infantry"  0 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc horse archers"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc eastern infantry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+;-----------------------
+;-------- 2 ------------
+                recruit "merc greek hoplites"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc barbarian cavalry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc numidian cavalry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+;-----------------------
+		population_loyalty_bonus bonus -1
+                taxable_income_bonus bonus 3
+            }
+            construction 2
+            cost 800
+            settlement_min large_town
+            upgrades
+            {
+                mercenary_guild_03
+            }
+        }
+        mercenary_guild_03 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management and building_present_min_level equestrian cavalry_barracks and building_present_min_level smith blacksmith
+        {
+            capability
+            {
+;-------- 1 ------------
+                recruit "merc barbarian infantry"  0 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc horse archers"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc eastern infantry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+;-----------------------
+;-------- 2 ------------
+                recruit "merc greek hoplites"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc barbarian cavalry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc numidian cavalry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+;-----------------------
+;-------- 3 ------------
+                recruit "merc spanish infantry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc thracian"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc sarmatian cavalry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+;-----------------------
+		population_loyalty_bonus bonus -1
+                taxable_income_bonus bonus 3
+            }
+            construction 3
+            cost 1600
+            settlement_min city
+            upgrades
+            {
+		mercenary_guild_04
+            }
+        }
+        mercenary_guild_04 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } and building_present_min_level management_peasant common_management and building_present_min_level smith smiths_workshop
+        {
+            capability
+            {
+;-------- 1 ------------
+                recruit "merc barbarian infantry"  0 requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc horse archers"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc eastern infantry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+;-----------------------
+;-------- 2 ------------
+                recruit "merc greek hoplites"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc barbarian cavalry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc numidian cavalry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+;-----------------------
+;-------- 3 ------------
+                recruit "merc spanish infantry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc thracian"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+                recruit "merc sarmatian cavalry"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, } 
+;-----------------------
+;-------- 4 ------------
+                recruit "merc bastarnae"  0  requires factions { barbarian, carthaginian, eastern, egyptian, greek, roman, }
+;-----------------------
+		population_loyalty_bonus bonus -1
+                taxable_income_bonus bonus 3
+            }
+            construction 5
+            cost 3200
+            settlement_min large_city
+            upgrades
+            {
+            }
+        }
+        veterans_guild_01 requires factions { roman, } and building_present_min_level management_peasant common_management and marian_reforms and building_present_min_level barracks militia_barracks and building_present_min_level equestrian stables and building_present_min_level missiles practice_field
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "roman hastati"  0  requires factions { roman, macedon, slave, }
+                recruit "roman light cavalry"  0  requires factions { roman, macedon, slave, }
+                recruit "roman velite"  0  requires factions { roman, macedon, slave, }
+;-----------------
+                taxable_income_bonus bonus -3
+            }
+            construction 2
+            cost 800
+            settlement_min large_town
+            upgrades
+            {
+		veterans_guild_02
+            }
+        }
+        veterans_guild_02 requires factions { roman, } and building_present_min_level management_peasant common_management and marian_reforms and building_present_min_level barracks city_barracks and building_present_min_level equestrian cavalry_barracks and building_present_min_level missiles archery_range
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "roman hastati"  0  requires factions { roman, macedon, slave, }
+                recruit "roman light cavalry"  0  requires factions { roman, macedon, slave, }
+                recruit "roman velite"  0  requires factions { roman, macedon, slave, }
+;-----------------
+;------- 2 -------
+                recruit "roman princeps"  0  requires factions { roman, macedon, slave, }
+                recruit "roman cavalry auxillia"  0  requires factions { roman, macedon, slave, }
+                recruit "roman archer"  0  requires factions { roman, macedon, slave, }
+;-----------------
+                taxable_income_bonus bonus -6
+            }
+            construction 3
+            cost 1600
+            settlement_min city
+            upgrades
+            {
+		veterans_guild_03
+            }
+        }
+        veterans_guild_03 requires factions { roman, } and building_present_min_level management_peasant common_management and marian_reforms and building_present_min_level barracks army_barracks and building_present_min_level equestrian hippodrome and building_present_min_level missiles archery_range
+        {
+            capability
+            {
+;------- 1 -------
+                recruit "roman hastati"  0  requires factions { roman, macedon, slave, }
+                recruit "roman light cavalry"  0  requires factions { roman, macedon, slave, }
+                recruit "roman velite"  0  requires factions { roman, macedon, slave, }
+;-----------------
+;------- 2 -------
+                recruit "roman princeps"  0  requires factions { roman, macedon, slave, }
+                recruit "roman cavalry auxillia"  0  requires factions { roman, macedon, slave, }
+                recruit "roman archer"  0  requires factions { roman, macedon, }
+;-----------------
+;------- 3 -------
+                recruit "roman triarii"  0  requires factions { roman, macedon, slave, }
+                recruit "bi scholae palatinae"  0  requires factions { roman, macedon, slave, }
+;-----------------
+                taxable_income_bonus bonus -9
+            }
+            construction 5
+            cost 3200
+            settlement_min large_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building test_01
+{
+    levels test_01_one test_01_two test_01_three test_01_four test_01_five
+    {
+        test_01_one requires factions { britons, }
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+		taxable_income_bonus bonus 5
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                test_01_two
+            }
+        }
+
+        test_01_two requires factions { britons, }
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                recruits_exp_bonus bonus 2
+		taxable_income_bonus bonus 10
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                test_01_three
+            }
+        }
+        test_01_three requires factions { britons, }
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                recruits_exp_bonus bonus 3
+		taxable_income_bonus bonus 15
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+		test_01_four
+            }
+        }
+        test_01_four requires factions { britons, }
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                recruits_exp_bonus bonus 3
+		taxable_income_bonus bonus 15
+            }
+            construction  5 
+            cost  3200 
+            settlement_min large_city
+            upgrades
+            {
+		test_01_five
+            }
+        }
+        test_01_five requires factions { britons, }
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                recruits_exp_bonus bonus 3
+		taxable_income_bonus bonus 15
+            }
+            construction  6 
+            cost  6400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building test_02
+{
+    levels test_02_one test_02_two test_02_three 
+    {
+        test_02_one requires factions { scythia, }; and not building_present_min_level test_01 test_01_one
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+		taxable_income_bonus bonus -5
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                test_02_two
+            }
+        }
+        test_02_two requires factions { scythia, }; and not building_present_min_level test_01 test_01_one
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                recruits_exp_bonus bonus 2
+		taxable_income_bonus bonus -10
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                test_02_three
+            }
+        }
+        test_02_three requires factions { scythia, }; and not building_present_min_level test_01 test_01_one
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                recruits_exp_bonus bonus 3
+		taxable_income_bonus bonus -15
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building test_03
+{
+    levels test_03_one test_03_two test_03_three 
+    {
+        test_03_one requires factions { gauls, }; and building_present_min_level test_01 test_01_one or building_present_min_level test_02 test_02_one
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+                test_03_two
+		test_03_three
+            }
+        }
+        test_03_two requires factions { gauls, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 2
+                recruits_exp_bonus bonus 2
+            }
+            construction  2 
+            cost  800 
+            settlement_min large_town
+            upgrades
+            {
+                test_03_three
+            }
+        }
+        test_03_three requires factions { gauls, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 3
+                recruits_exp_bonus bonus 3
+            }
+            construction  3 
+            cost  1600 
+            settlement_min city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building test_04 
+{
+    levels test_04_one test_04_two test_04_three test_04_four test_04_five
+    {
+        test_04_one requires factions { germans, }; and hidden_resource rome
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+		population_growth_bonus bonus 6
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+		test_04_two
+            }
+        }
+       test_04_two requires factions { germans, }; and hidden_resource rome
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+		population_growth_bonus bonus 6
+            }
+            construction  1 
+            cost  400 
+            settlement_min large_town
+            upgrades
+            {
+		test_04_three
+
+            }
+        }
+       test_04_three requires factions { germans, } 
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+		population_growth_bonus bonus 6
+            }
+            construction  1 
+            cost  400 
+            settlement_min city
+            upgrades
+            {
+		test_04_four
+            }
+        }
+        test_04_four requires factions { germans, }; and hidden_resource rome
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+		population_growth_bonus bonus 6
+            }
+            construction  1 
+            cost  400 
+            settlement_min large_city
+            upgrades
+            {
+		test_04_five
+            }
+        }
+        test_04_five requires factions { germans, }
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+		population_growth_bonus bonus 6
+            }
+            construction  1 
+            cost  400 
+            settlement_min huge_city
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building test_05
+{
+    levels test_05_one
+    {
+        test_05_one requires factions { dacia, } 
+;	test_05_one requires factions { roman, }
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+		population_loyalty_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building test_06
+{
+    levels test_06_one
+    {
+        test_06_one requires factions { spain, } 
+;	test_06_one requires factions { roman, }
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+		population_growth_bonus bonus -6
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building test_07
+{
+    levels test_07_one
+    {
+        test_07_one requires factions { thrace, } 
+;	test_07_one requires factions { roman, }
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building test_08
+{
+    levels test_08_one
+    {
+        test_08_one requires factions { greek_cities, } 
+;	test_08_one requires factions { roman, }
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building test_09
+{
+    levels test_09_one
+    {
+        test_09_one requires factions { macedon, } 
+;	test_09_one requires factions { roman, }
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
+building test_10
+{
+    levels test_10_one
+    {
+        test_10_one requires factions { seleucid, } 
+;	test_10_one requires factions { roman, }
+        {
+            capability
+            {
+                happiness_bonus bonus 1
+                recruits_exp_bonus bonus 1
+            }
+            construction  1 
+            cost  400 
+            settlement_min town
+            upgrades
+            {
+            }
+        }
+    }
+    plugins 
+    {
+    }
+}
